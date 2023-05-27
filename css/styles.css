@@ -1,0 +1,140 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+/*--------------------------------------------------  */
+/* GRID CODE MAIN PAGE */
+.page--grid {
+  display: grid;
+  grid-template-areas:
+    "header header header"
+    "nav nav nav"
+    "main main aside"
+    "footer footer footer";
+  grid-template-columns: 1fr 1fr auto;
+  grid-template-rows: 10px 1fr 10fr 2fr;
+}
+
+header {
+  background-color: rgb(198, 150, 150);
+  grid-area: header;
+}
+nav {
+  grid-area: nav;
+}
+aside {
+  grid-area: aside;
+}
+main {
+  background-color: rgb(150, 198, 151);
+  grid-area: main;
+}
+footer {
+  grid-area: footer;
+}
+
+/*--------------------------------------------------  */
+/* NAV */
+nav {
+  text-transform: capitalize;
+}
+
+.nav--position {
+  position: sticky;
+  top: 0; /*important to put*/
+  z-index: 1000;
+}
+
+.nav--bg {
+  background-color: #ffffff;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.nav--flex {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  /* padding: 20px 7%; */
+}
+
+.nav__logo--size {
+  max-height: 8vh;
+}
+
+.nav__menu ul {
+  list-style: none;
+}
+
+.nav__menu ul li {
+  float: left;
+  position: relative;
+}
+
+.nav__menu--color {
+  color: #2dc1d7;
+}
+
+.nav__menu--color:hover {
+  background-color: #faf048;
+  color: #2dc1d7;
+}
+
+.nav__menu ul li a {
+  /* COMO PONER EN BEM ESTO */
+  color: inherit;
+  display: block;
+  font-size: 1.2rem;
+  font-weight: 700;
+  padding: 30px;
+  text-decoration: none;
+}
+
+.nav__menu__submenu {
+  background: #ffffff;
+  display:none;
+  left: 0;
+  position: absolute;
+  width: 200px;
+}
+
+.nav__menu__submenu li {
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  width: 100%;
+}
+
+.nav__menu__submenu li ul {
+  left: 200px;
+  top: 0;
+}
+.nav__menu li:focus-within  > ul{
+    display:initial;
+}
+.nav__menu ul li:hover > ul {
+    display:initial;
+}
+
+#menu-bar{
+    display:none;
+}
+
+nav label{
+    color:rgb(198, 150, 150);
+    cursor:pointer;
+    display: none;
+    font-size:20px;
+}
+
+
+/*--------------------------------------------------  */
+/* NAV MEDIA QUERY */
+
+@media screen and (min-width: 768px) {
+
+}
+
+@media screen and (min-width: 1024px) {
+    nav label{
+display: none;
+    }
+}
