@@ -1,0 +1,25 @@
+
+@import "./base/reset";
+@import "./base/typo";
+@import "./base/colores";
+
+@import "./components/hero";
+@import "./components/parallax";
+
+@import "./layout/grid";
+@import "./layout/header";
+@import "./layout/footer";
+@import "./layout/nav";
+
+
+@import "./views/features";
+
+
+
+
+  body {
+    background-color: #2dc1d7;
+  }
+
+
+  
