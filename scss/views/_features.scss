@@ -1,5 +1,24 @@
-.section_hero{
-    @include hero_section("../assets/img/pattern_Water_leak.png");
-    @include parallax(repeat)
+.section_hero {
+  @include hero_section("../assets/img/pattern_Water_leak.png");
+  @include parallax(repeat, contain);
 }
 
+.feature__section {
+  &--cut {
+    @media (width> 768px) {
+      clip-path: polygon(15% 00%, 100% 0%, 100% 100%, 15% 100%, 10% 70%);
+    }
+    @media (width> 1024px) {
+      clip-path: polygon(25% 00%, 100% 0%, 100% 100%, 25% 100%, 20% 70%);
+    }
+  }
+  &--bg {
+    background-image: url(../assets/img/Road_map.png);
+    @include parallax(no-repeat, cover);
+  }
+}
+
+.flex--responsive--right {
+  @extend .flex--responsive;
+  justify-content: flex-end;
+}

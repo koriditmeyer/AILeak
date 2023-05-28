@@ -1,6 +1,6 @@
-@mixin parallax ($repeat) {
+@mixin parallax ($repeat,$size) {
     background-attachment: fixed;
     background-position: LEFT;
     background-repeat: $repeat;
-    background-size: contain;
+    background-size: $size;
   }

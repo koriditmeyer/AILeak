@@ -6,12 +6,20 @@ $bg_5:#333;
 $txt_1:#2dc1d7;
 $txt_2:#000000;
 $txt_3:#ffffff;
+$txt_4:#333;
 
 $color_light:(
 background:$bg_2,
 title:$txt_1,
 texto:$txt_2,
 );
+
+$color_light_green:(
+background:$bg_3,
+title:$txt_1,
+texto:$txt_4,
+);
+
 
 $color_dark:(
     background:$bg_5,

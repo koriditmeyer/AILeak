@@ -1,37 +1,25 @@
-@mixin card {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-
-    padding: 20px;
-  }
-
-  .card_1{
-@include card;
-  }
-
-
-  .card_width_1 {
-    width: 50%;
-  }
-  .card_width_2 {
-    width: 30%;
-  }
-  
-  .card_width_3 {
-    width: 80%;
-  }
-  
- 
-  
-  .card a {
+@mixin sec__card {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 20px;
+  a {
     align-items: center;
     display: flex;
     justify-content: center;
     padding: 5px;
   }
-  .card a img {
+  a img {
     width: 20%;
   }
-  
+}
+
+.card--responsive {
+  @include sec__card;
+}
+
+.card--responsive--head {
+  @include sec__card;
+  max-width: 500px;
+}

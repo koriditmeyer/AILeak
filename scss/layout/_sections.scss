@@ -26,7 +26,7 @@
         text-align: center;
         text-transform: uppercase;
       }
-    p {
+    p,li {
         color: $txt_color;
         font-size: 1.4rem;
         font-weight: 300;
@@ -40,6 +40,14 @@
         map-get($color_light , title),
         map-get($color_light , texto),
     )
+}
+
+.section--light--green{
+  @include section(
+      map-get($color_light_green , background),
+      map-get($color_light_green, title),
+      map-get($color_light_green , texto),
+  )
 }
 
 .section--dark{

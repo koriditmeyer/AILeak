@@ -9,44 +9,50 @@ html {
   font-size: 14px;
 }
 
-.card_1 {
+.card--responsive {
   align-items: center;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   padding: 20px;
 }
-
-.card_width_1 {
-  width: 50%;
-}
-
-.card_width_2 {
-  width: 30%;
-}
-
-.card_width_3 {
-  width: 80%;
-}
-
-.card a {
+.card--responsive a {
   align-items: center;
   display: flex;
   justify-content: center;
   padding: 5px;
 }
-
-.card a img {
+.card--responsive a img {
   width: 20%;
 }
 
-.flex--responsive {
+.card--responsive--head {
+  align-items: center;
   display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 20px;
+  max-width: 500px;
+}
+.card--responsive--head a {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+}
+.card--responsive--head a img {
+  width: 20%;
 }
 
-.flex--responsive > * {
+.flex--responsive, .flex--responsive--right {
+  display: flex;
+  flex-wrap: wrap-reverse;
+  gap: 1rem;
+  padding: 20px;
+  justify-content: center;
+}
+
+.flex--responsive > *, .flex--responsive--right > * {
   flex-basis: 240px;
   flex-grow: 1;
   flex-shrink: 1;
@@ -96,8 +102,42 @@ footer {
   text-align: center;
   text-transform: uppercase;
 }
-.section--light p {
+.section--light p, .section--light li {
   color: #000000;
+  font-size: 1.4rem;
+  font-weight: 300;
+  margin-bottom: 1%;
+}
+
+.section--light--green {
+  background-color: #faf048;
+}
+.section--light--green h2 {
+  color: #2dc1d7;
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 5%;
+  text-align: center;
+  text-transform: uppercase;
+}
+.section--light--green h3 {
+  text-transform: uppercase;
+  color: #2dc1d7;
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin-bottom: 3%;
+  text-align: center;
+}
+.section--light--green h4 {
+  color: #2dc1d7;
+  font-size: 1.5rem;
+  font-weight: 300;
+  margin-bottom: 2%;
+  text-align: center;
+  text-transform: uppercase;
+}
+.section--light--green p, .section--light--green li {
+  color: #333;
   font-size: 1.4rem;
   font-weight: 300;
   margin-bottom: 1%;
@@ -130,11 +170,72 @@ footer {
   text-align: center;
   text-transform: uppercase;
 }
-.section--dark p {
+.section--dark p, .section--dark li {
   color: #ffffff;
   font-size: 1.4rem;
   font-weight: 300;
   margin-bottom: 1%;
+}
+
+/*--------------------------------------------------  */
+/* GRID CODE MAIN PAGE */
+.page--grid {
+  display: grid;
+  grid-template-areas: "header header header" "nav nav nav" "main main main" "footer footer footer";
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 10px auto 10fr 10px;
+}
+
+header {
+  grid-area: header;
+}
+
+nav {
+  grid-area: nav;
+}
+
+aside {
+  grid-area: aside;
+  display: none;
+}
+
+main {
+  grid-area: main;
+}
+
+footer {
+  grid-area: footer;
+}
+
+.grid--responsive {
+  /* Responsive gid without media queries */
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  padding: 20px;
+  /* Responsive gid with mediaqueries -> More exact */
+}
+.grid--responsive--mq {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(1, 1fr);
+  padding: 20px;
+}
+@media (width > 768px) {
+  .grid--responsive--mq .grid--responsive_MQ {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 20px;
+  }
+}
+@media (width > 1024px) {
+  .grid--responsive--mq .grid--responsive_MQ {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 20px;
+  }
 }
 
 .section_hero {
@@ -146,6 +247,28 @@ footer {
   background-position: LEFT;
   background-repeat: repeat;
   background-size: contain;
+}
+
+@media (width > 768px) {
+  .feature__section--cut {
+    clip-path: polygon(15% 0%, 100% 0%, 100% 100%, 15% 100%, 10% 70%);
+  }
+}
+@media (width > 1024px) {
+  .feature__section--cut {
+    clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 25% 100%, 20% 70%);
+  }
+}
+.feature__section--bg {
+  background-image: url(../assets/img/Road_map.png);
+  background-attachment: fixed;
+  background-position: LEFT;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.flex--responsive--right {
+  justify-content: flex-end;
 }
 
 body {

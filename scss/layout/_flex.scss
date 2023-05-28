@@ -1,7 +1,9 @@
 .flex--responsive {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: wrap-reverse;
   gap: 1rem;
+  padding:20px;
+  justify-content: center;
 }
 
 .flex--responsive > * {
@@ -9,3 +11,4 @@
   flex-grow: 1;
   flex-shrink: 1;
 }
+
