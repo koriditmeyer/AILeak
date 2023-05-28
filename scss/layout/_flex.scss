@@ -1,0 +1,11 @@
+.flex--responsive {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.flex--responsive > * {
+  flex-basis: 240px;
+  flex-grow: 1;
+  flex-shrink: 1;
+}

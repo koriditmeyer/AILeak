@@ -1,6 +1,5 @@
-.hero_section{
+.section_hero{
     @include hero_section("../assets/img/pattern_Water_leak.png");
     @include parallax(repeat)
 }
-
 

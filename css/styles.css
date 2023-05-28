@@ -6,37 +6,50 @@
 
 html {
   font-family: "Nanum Gothic Coding", monospace;
-  font-size: 20px;
+  font-size: 14px;
 }
 
-/*--------------------------------------------------  */
-/* GRID CODE MAIN PAGE */
-.page--grid {
-  display: grid;
-  grid-template-areas: "header header header" "nav nav nav" "main main main" "footer footer footer";
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 10px auto 10fr 10px;
+.card_1 {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 20px;
 }
 
-header {
-  grid-area: header;
+.card_width_1 {
+  width: 50%;
 }
 
-nav {
-  grid-area: nav;
+.card_width_2 {
+  width: 30%;
 }
 
-aside {
-  grid-area: aside;
-  display: none;
+.card_width_3 {
+  width: 80%;
 }
 
-main {
-  grid-area: main;
+.card a {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  padding: 5px;
 }
 
-footer {
-  grid-area: footer;
+.card a img {
+  width: 20%;
+}
+
+.flex--responsive {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.flex--responsive > * {
+  flex-basis: 240px;
+  flex-grow: 1;
+  flex-shrink: 1;
 }
 
 header {
@@ -56,7 +69,75 @@ footer {
   color: #2dc1d7 !important;
 }
 
-.hero_section {
+.section--light {
+  background-color: #F2F2F2;
+}
+.section--light h2 {
+  color: #2dc1d7;
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 5%;
+  text-align: center;
+  text-transform: uppercase;
+}
+.section--light h3 {
+  text-transform: uppercase;
+  color: #2dc1d7;
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin-bottom: 3%;
+  text-align: center;
+}
+.section--light h4 {
+  color: #2dc1d7;
+  font-size: 1.5rem;
+  font-weight: 300;
+  margin-bottom: 2%;
+  text-align: center;
+  text-transform: uppercase;
+}
+.section--light p {
+  color: #000000;
+  font-size: 1.4rem;
+  font-weight: 300;
+  margin-bottom: 1%;
+}
+
+.section--dark {
+  background-color: #333;
+}
+.section--dark h2 {
+  color: #2dc1d7;
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 5%;
+  text-align: center;
+  text-transform: uppercase;
+}
+.section--dark h3 {
+  text-transform: uppercase;
+  color: #2dc1d7;
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin-bottom: 3%;
+  text-align: center;
+}
+.section--dark h4 {
+  color: #2dc1d7;
+  font-size: 1.5rem;
+  font-weight: 300;
+  margin-bottom: 2%;
+  text-align: center;
+  text-transform: uppercase;
+}
+.section--dark p {
+  color: #ffffff;
+  font-size: 1.4rem;
+  font-weight: 300;
+  margin-bottom: 1%;
+}
+
+.section_hero {
   height: 100vh;
   background-image: url("../assets/img/pattern_Water_leak.png");
   opacity: 0.9;

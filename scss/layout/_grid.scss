@@ -1,31 +1,57 @@
 /*--------------------------------------------------  */
 /* GRID CODE MAIN PAGE */
 .page--grid {
-    display: grid;
-    grid-template-areas:
-      "header header header"
-      "nav nav nav"
-      "main main main"
-      "footer footer footer";
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 10px auto 10fr 10px;
-  }
-  
-  header {
-    grid-area: header;
-  }
-  nav {
-    grid-area: nav;
-  }
-  aside {
-    grid-area: aside;
-    display: none;
-  }
-  main {
-    grid-area: main;
-  }
-  footer {
-    grid-area: footer;
-  }
+  display: grid;
+  grid-template-areas:
+    "header header header"
+    "nav nav nav"
+    "main main main"
+    "footer footer footer";
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 10px auto 10fr 10px;
+}
 
-  
+header {
+  grid-area: header;
+}
+nav {
+  grid-area: nav;
+}
+aside {
+  grid-area: aside;
+  display: none;
+}
+main {
+  grid-area: main;
+}
+footer {
+  grid-area: footer;
+}
+
+@mixin grid($columns, $size) {
+  display: grid;
+  gap: 1rem;
+  justify-content: center;
+  grid-template-columns: repeat($columns, $size);
+}
+
+.grid--responsive {
+  /* Responsive gid without media queries */
+  @include grid(auto-fit, minmax(320px, 1fr));
+
+  /* Responsive gid with mediaqueries -> More exact */
+  &--MQ {
+    @include grid(1, 1fr);
+
+    @media (width> 768px) {
+      .grid--responsive_MQ {
+        @include grid(2, 1fr);
+      }
+    }
+    @media (width> 1024px) {
+      .grid--responsive_MQ {
+        @include grid(3, 1fr);
+      }
+    }
+  }
+}

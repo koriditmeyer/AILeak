@@ -3,14 +3,17 @@
 @import "./base/typo";
 @import "./base/colores";
 
+@import "./components/buttons";
+@import "./components/cards";
 @import "./components/hero";
 @import "./components/parallax";
 
-@import "./layout/grid";
+
+@import "./layout/flex";
 @import "./layout/header";
 @import "./layout/footer";
 @import "./layout/nav";
-
+@import "./layout/sections";
 
 @import "./views/features";
 
