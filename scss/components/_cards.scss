@@ -21,5 +21,23 @@
 
 .card--responsive--head {
   @include sec__card;
-  max-width: 500px;
+  max-width: 700px;
 }
+
+.card__presentation--responsive{
+  @include sec__card;
+  background-color: #33333306;
+  :hover {
+    background-color: #33333310;
+  }
+  img {
+    clip-path: polygon(70% 0%, 100% 70%, 70% 100%, 0% 70%);
+    opacity: 0.5;
+    width: 60%;
+  }
+  img:hover {
+    clip-path: circle(50%);
+    opacity: 1;
+  }
+}
+

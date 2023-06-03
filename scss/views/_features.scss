@@ -1,6 +1,6 @@
-.section_hero {
+.section_hero__features {
   @include hero_section("../assets/img/pattern_Water_leak.png");
-  @include parallax(repeat, contain);
+  @include parallax(repeat, contain, left);
 }
 
 .feature__section {
@@ -14,7 +14,7 @@
   }
   &--bg {
     background-image: url(../assets/img/Road_map.png);
-    @include parallax(no-repeat, cover);
+    @include parallax(no-repeat, cover, left);
   }
 }
 

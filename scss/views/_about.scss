@@ -1,0 +1,4 @@
+.section_hero__about  {
+  @include hero_section("../assets/img/Image_about_us_team_work_water.png");
+  @include parallax(no-repeat, contain, right);
+}
