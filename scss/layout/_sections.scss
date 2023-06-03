@@ -1,59 +1,74 @@
-@mixin section($bg_color,$h_color,$txt_color){
-    background-color: $bg_color ;
-    
-    h2 {
-        color: $h_color;
-        font-size: 2rem;
-        font-weight: 600;
-        margin-bottom: 5%;
-        text-align: center;
-        text-transform: uppercase;
-      } 
-    h3 {
-        text-transform: uppercase;
-        color: $h_color;
-        font-size: 1.8rem;
-        font-weight: 500;
-        margin-bottom: 3%;
-        text-align: center;
-        
-      }
-    h4 {
-        color: $h_color;
-        font-size: 1.5rem;
-        font-weight: 300;
-        margin-bottom: 2%;
-        text-align: center;
-        text-transform: uppercase;
-      }
-    p,li {
-        color: $txt_color;
-        font-size: 1.4rem;
-        font-weight: 300;
-        margin-bottom: 1%;
-      }
+@mixin section($bg_color, $h_color, $txt_color) {
+  background-color: $bg_color;
+
+  h2 {
+    color: $h_color;
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 5%;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  h3 {
+    text-transform: uppercase;
+    color: $h_color;
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin-bottom: 3%;
+    text-align: center;
+  }
+  h4 {
+    color: $h_color;
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin-bottom: 2%;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  p,
+  li {
+    color: $txt_color;
+    font-size: 1.4rem;
+    font-weight: 300;
+    margin-bottom: 1%;
+  }
 }
 
-.section--light{
-    @include section(
-        map-get($color_light , background),
-        map-get($color_light , title),
-        map-get($color_light , texto),
-    )
-}
-
-.section--light--green{
+.section--light {
   @include section(
-      map-get($color_light_green , background),
-      map-get($color_light_green, title),
-      map-get($color_light_green , texto),
-  )
+    map-get($color_light, background),
+    map-get($color_light, title),
+    map-get($color_light, texto)
+  );
 }
 
-.section--dark{
-    @include section(
-        map-get($color_dark , background),
-        map-get($color_dark , title),
-        map-get($color_dark , texto),
-    )
+.section--light--green {
+  @include section(
+    map-get($color_light_green, background),
+    map-get($color_light_green, title),
+    map-get($color_light_green, texto)
+  );
 }
+
+.section--dark {
+  @include section(
+    map-get($color_dark, background),
+    map-get($color_dark, title),
+    map-get($color_dark, texto)
+  );
+}
+
+.footer--dark {
+  @extend .section--dark;
+  h4 {
+    font-size: 20rem;
+    margin-bottom: 10%;
+  }
+   p,
+  li {
+    font-size: 10rem;
+    margin-bottom: 10%;
+  }
+}
+  
+

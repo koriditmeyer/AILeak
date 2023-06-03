@@ -8,7 +8,7 @@
     "main main main"
     "footer footer footer";
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 10px auto 10fr 10px;
+  grid-template-rows: 10px auto 10fr auto;
 }
 
 header {
@@ -32,7 +32,7 @@ footer {
   display: grid;
   gap: 1rem;
   grid-template-columns: repeat($columns, $size);
-  padding:20px;
+  padding: 20px;
 }
 
 .grid--responsive {
@@ -53,5 +53,59 @@ footer {
         @include grid(3, 1fr);
       }
     }
+  }
+}
+
+.grid__footer {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 100%;
+  grid-template-areas:
+    "info"
+    
+    "address"
+    "rights";
+  grid-template-columns: auto;
+
+  padding: 5px;
+  .info {
+    grid-area: info;
+  }
+  .support {
+    grid-area: support;
+    display: none;
+  }
+  .address {
+    grid-area: address;
+    display: none;
+  }
+  .rights {
+    grid-area: rights;
+    text-align: center;
+  }
+}
+.grid__footer--responsive {
+  @extend .grid__footer;
+  @media (width> 768px) {
+    grid-template-areas:
+      "info support"
+      "info address"
+      "rights rights";
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto auto auto;
+    .support {
+      display:block;
+    }
+    .address {
+      display:block;
+    }
+  }
+  @media (width> 1024px) {
+    grid-template-areas:
+      "info support address"
+      "info support address"
+      "rights rights rights";
+    grid-template-columns: 50% 25% 25%;
+    grid-template-rows: auto auto auto;
   }
 }

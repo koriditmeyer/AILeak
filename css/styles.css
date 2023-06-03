@@ -9,6 +9,50 @@ html {
   font-size: 14px;
 }
 
+button,
+input[type=button],
+input[type=submit],
+input[type=reset] {
+  border: none;
+  cursor: pointer;
+  font-family: "Nanum Gothic Coding", monospace;
+  font-size: 1.1rem;
+  margin: 0px 20px;
+  margin: 10px;
+  padding: 16px 32px;
+  text-decoration: none;
+}
+
+@media (width > 768px) {
+  .button__section, .button__section--dark, .button__section--light {
+    font-size: 1.2rem;
+  }
+}
+@media (width > 1024px) {
+  .button__section, .button__section--dark, .button__section--light {
+    font-size: 1.3rem;
+  }
+}
+
+.button__section--light {
+  background-color: #ffffff;
+  color: #2dc1d7;
+}
+.button__section--light:hover {
+  background-color: #faf048;
+  color: #2dc1d7;
+}
+
+.button__section--dark {
+  background-color: #ffffff;
+  color: #2dc1d7;
+  width: auto;
+}
+.button__section--dark:hover {
+  background-color: #2dc1d7;
+  color: #ffffff;
+}
+
 .card--responsive {
   align-items: center;
   display: flex;
@@ -44,26 +88,60 @@ html {
   width: 20%;
 }
 
-.flex--responsive, .flex--responsive--right {
-  display: flex;
-  flex-wrap: wrap-reverse;
-  gap: 1rem;
-  padding: 20px;
-  justify-content: center;
+.instagram {
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+  -webkit-background-clip: text;
+  /* Also define standard property for compatibility */
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 200px; /* change this to change the size*/
 }
 
-.flex--responsive > *, .flex--responsive--right > * {
+.linkedin {
+  background: #0A66C2;
+  -webkit-background-clip: text;
+  /* Also define standard property for compatibility */
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.facebook {
+  background: #3b5998;
+  -webkit-background-clip: text;
+  /* Also define standard property for compatibility */
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.flex, .flex__button--responsive, .flex__article--responsive, .flex__article--responsive--right {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  padding: 20px;
+}
+
+.flex__article--responsive, .flex__article--responsive--right {
+  flex-wrap: wrap-reverse;
+}
+.flex__article--responsive > *, .flex__article--responsive--right > * {
   flex-basis: 240px;
   flex-grow: 1;
   flex-shrink: 1;
 }
 
-header {
-  background-color: rgb(255, 255, 255);
+@media (width > 768px) {
+  .flex__article--responsive--right {
+    justify-content: flex-end;
+  }
+  .flex__article--responsive--right > * {
+    flex-basis: 240px;
+    flex-grow: 0.7;
+    flex-shrink: auto;
+  }
 }
 
-footer {
-  background-color: #333;
+header {
+  background-color: rgb(255, 255, 255);
 }
 
 .nav-link {
@@ -102,7 +180,8 @@ footer {
   text-align: center;
   text-transform: uppercase;
 }
-.section--light p, .section--light li {
+.section--light p,
+.section--light li {
   color: #000000;
   font-size: 1.4rem;
   font-weight: 300;
@@ -136,17 +215,18 @@ footer {
   text-align: center;
   text-transform: uppercase;
 }
-.section--light--green p, .section--light--green li {
+.section--light--green p,
+.section--light--green li {
   color: #333;
   font-size: 1.4rem;
   font-weight: 300;
   margin-bottom: 1%;
 }
 
-.section--dark {
+.section--dark, .footer--dark {
   background-color: #333;
 }
-.section--dark h2 {
+.section--dark h2, .footer--dark h2 {
   color: #2dc1d7;
   font-size: 2rem;
   font-weight: 600;
@@ -154,7 +234,7 @@ footer {
   text-align: center;
   text-transform: uppercase;
 }
-.section--dark h3 {
+.section--dark h3, .footer--dark h3 {
   text-transform: uppercase;
   color: #2dc1d7;
   font-size: 1.8rem;
@@ -162,7 +242,7 @@ footer {
   margin-bottom: 3%;
   text-align: center;
 }
-.section--dark h4 {
+.section--dark h4, .footer--dark h4 {
   color: #2dc1d7;
   font-size: 1.5rem;
   font-weight: 300;
@@ -170,11 +250,23 @@ footer {
   text-align: center;
   text-transform: uppercase;
 }
-.section--dark p, .section--dark li {
+.section--dark p, .footer--dark p,
+.section--dark li,
+.footer--dark li {
   color: #ffffff;
   font-size: 1.4rem;
   font-weight: 300;
   margin-bottom: 1%;
+}
+
+.footer--dark h4 {
+  font-size: 20rem;
+  margin-bottom: 10%;
+}
+.footer--dark p,
+.footer--dark li {
+  font-size: 10rem;
+  margin-bottom: 10%;
 }
 
 /*--------------------------------------------------  */
@@ -183,7 +275,7 @@ footer {
   display: grid;
   grid-template-areas: "header header header" "nav nav nav" "main main main" "footer footer footer";
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 10px auto 10fr 10px;
+  grid-template-rows: 10px auto 10fr auto;
 }
 
 header {
@@ -238,6 +330,51 @@ footer {
   }
 }
 
+.grid__footer, .grid__footer--responsive {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 100%;
+  grid-template-areas: "info" "address" "rights";
+  grid-template-columns: auto;
+  padding: 5px;
+}
+.grid__footer .info, .grid__footer--responsive .info {
+  grid-area: info;
+}
+.grid__footer .support, .grid__footer--responsive .support {
+  grid-area: support;
+  display: none;
+}
+.grid__footer .address, .grid__footer--responsive .address {
+  grid-area: address;
+  display: none;
+}
+.grid__footer .rights, .grid__footer--responsive .rights {
+  grid-area: rights;
+  text-align: center;
+}
+
+@media (width > 768px) {
+  .grid__footer--responsive {
+    grid-template-areas: "info support" "info address" "rights rights";
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto auto auto;
+  }
+  .grid__footer--responsive .support {
+    display: block;
+  }
+  .grid__footer--responsive .address {
+    display: block;
+  }
+}
+@media (width > 1024px) {
+  .grid__footer--responsive {
+    grid-template-areas: "info support address" "info support address" "rights rights rights";
+    grid-template-columns: 50% 25% 25%;
+    grid-template-rows: auto auto auto;
+  }
+}
+
 .section_hero {
   height: 100vh;
   background-image: url("../assets/img/pattern_Water_leak.png");
@@ -265,10 +402,6 @@ footer {
   background-position: LEFT;
   background-repeat: no-repeat;
   background-size: cover;
-}
-
-.flex--responsive--right {
-  justify-content: flex-end;
 }
 
 body {

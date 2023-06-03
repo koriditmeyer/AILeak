@@ -1,0 +1,45 @@
+button,
+input[type="button"],
+input[type="submit"],
+input[type="reset"] {
+  border: none;
+  cursor: pointer;
+  font-family: "Nanum Gothic Coding", monospace;
+  font-size: 1.1rem;
+  margin: 0px 20px;
+  margin: 10px;
+  padding: 16px 32px;
+  text-decoration: none;
+}
+
+.button__section {
+    @media (width> 768px) {
+        font-size: 1.2rem;
+      }
+      @media (width> 1024px) {
+        font-size: 1.3rem;
+      }
+    
+}
+
+.button__section--light {
+  @extend .button__section;
+  background-color: #ffffff;
+  color: #2dc1d7;
+  
+  &:hover {
+    background-color: #faf048;
+    color: #2dc1d7;
+  }
+}
+.button__section--dark {
+    @extend .button__section;
+    background-color: #ffffff;
+    color: #2dc1d7;
+    width:auto;
+    &:hover {
+      background-color: #2dc1d7;
+      color: #ffffff;
+    }
+  }
+
