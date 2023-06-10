@@ -3,6 +3,6 @@
 }
 
 .nav-link:hover{
-    background-color: map-get($color_boton_light , background_hover );
+    background-color: map-get($color_boton_dark , background_hover );
     color:map-get($color_boton_light , texto )!important;
 }

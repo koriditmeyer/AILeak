@@ -1,0 +1,5 @@
+.index__section__hero {
+    @include hero_section("../assets/img/wave_patern_AILeak.webp",100vh);
+    @include parallax(repeat, contain, left);
+    @extend .hero--light;
+  }

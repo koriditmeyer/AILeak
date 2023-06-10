@@ -38,18 +38,18 @@ $color_dark:(
 );
 
 $color_boton_light:(
-    background:$bg_2,
-    background_hover:$bg_3,
+    background:$bg_1,
+    background_hover:$bg_4,
     texto:$txt_1,
     texto_hover:$txt_3,
     texto_focus: $bg_3
 );
 
 $color_boton_dark:(
-    background:$bg_2,
-    background_hover:$bg_4,
+    background:$bg_1,
+    background_hover:$bg_3,
     texto:$txt_1,
-    texto_hover:$txt_3 
+    texto_hover:$txt_1 
 );
 
 $color_input_light:(

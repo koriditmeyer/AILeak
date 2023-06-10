@@ -1,32 +1,5 @@
 /*--------------------------------------------------  */
-/* GRID CODE MAIN PAGE */
-.page--grid {
-  display: grid;
-  grid-template-areas:
-    "header header header"
-    "nav nav nav"
-    "main main main"
-    "footer footer footer";
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 10px auto 10fr auto;
-}
 
-header {
-  grid-area: header;
-}
-nav {
-  grid-area: nav;
-}
-aside {
-  grid-area: aside;
-  display: none;
-}
-main {
-  grid-area: main;
-}
-footer {
-  grid-area: footer;
-}
 
 @mixin grid($columns, $size) {
   display: grid;
@@ -55,7 +28,48 @@ footer {
     }
   }
 }
+/*--------------------------------------------------  */
+/* GRID CODE MAIN PAGE */
+.page--grid {
+  display: grid;
+  grid-template-areas:
+    "header"
+    "nav"
+    "main"
+    "footer";
+  grid-template-columns: 100%;
+  grid-template-rows: auto auto auto auto;
+  @media (width> 768px) {
+    grid-template-areas:
+    "header header header"
+    "nav nav nav"
+    "main main main"
+    "footer footer footer";
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto auto 10fr auto;
+    
+  }
+}
 
+header {
+  grid-area: header;
+}
+nav {
+  grid-area: nav;
+}
+aside {
+  grid-area: aside;
+  display: none;
+}
+main {
+  grid-area: main;
+}
+footer {
+  grid-area: footer;
+}
+
+
+/*--------------------------------------------------  */
 .grid__footer {
   display: grid;
   gap: 1rem;
@@ -107,7 +121,7 @@ footer {
     grid-template-rows: auto auto auto;
   }
 }
-
+/*--------------------------------------------------  */
 .grid__contact {
   display: grid;
   grid-template-areas:

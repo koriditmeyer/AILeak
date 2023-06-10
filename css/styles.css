@@ -37,22 +37,22 @@ input[type=reset] {
 }
 
 .button__section--light {
-  background-color: #F2F2F2;
+  background-color: rgb(255, 255, 255);
   color: #2dc1d7;
 }
 .button__section--light:hover {
-  background-color: #faf048;
+  background-color: #2dc1d7;
   color: #ffffff;
 }
 
 .button__section--dark {
-  background-color: #F2F2F2;
+  background-color: rgb(255, 255, 255);
   color: #2dc1d7;
   width: auto;
 }
 .button__section--dark:hover {
-  background-color: #2dc1d7;
-  color: #ffffff;
+  background-color: #faf048;
+  color: #2dc1d7;
 }
 
 .card--responsive {
@@ -193,7 +193,15 @@ input:hover {
 iframe {
   width: 100%;
   height: 100vh;
-  display: block;
+}
+
+.iframe_hero {
+  margin-right: auto;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
+  z-index: -1;
 }
 
 .image--blur {
@@ -481,10 +489,10 @@ header {
   margin-bottom: 10%;
 }
 
-.hero--light, .contact__section__hero, .waiting__list__section__hero, .features__section__hero, .about__section__hero {
+.hero--light, .contact__section__hero, .waiting__list__section__hero, .index__section__hero, .features__section__hero, .about__section__hero {
   background-color: #2dc1d7;
 }
-.hero--light h1, .contact__section__hero h1, .waiting__list__section__hero h1, .features__section__hero h1, .about__section__hero h1 {
+.hero--light h1, .contact__section__hero h1, .waiting__list__section__hero h1, .index__section__hero h1, .features__section__hero h1, .about__section__hero h1 {
   color: #ffffff;
   font-size: 1.8rem;
   font-weight: 700;
@@ -492,7 +500,7 @@ header {
   text-align: center;
   text-transform: uppercase;
 }
-.hero--light h2, .contact__section__hero h2, .waiting__list__section__hero h2, .features__section__hero h2, .about__section__hero h2 {
+.hero--light h2, .contact__section__hero h2, .waiting__list__section__hero h2, .index__section__hero h2, .features__section__hero h2, .about__section__hero h2 {
   color: #ffffff;
   font-size: 1.65rem;
   font-weight: 600;
@@ -500,7 +508,7 @@ header {
   text-align: center;
   text-transform: uppercase;
 }
-.hero--light h3, .contact__section__hero h3, .waiting__list__section__hero h3, .features__section__hero h3, .about__section__hero h3 {
+.hero--light h3, .contact__section__hero h3, .waiting__list__section__hero h3, .index__section__hero h3, .features__section__hero h3, .about__section__hero h3 {
   text-transform: uppercase;
   color: #ffffff;
   font-size: 1.5rem;
@@ -508,7 +516,7 @@ header {
   margin-bottom: 3%;
   text-align: center;
 }
-.hero--light h4, .contact__section__hero h4, .waiting__list__section__hero h4, .features__section__hero h4, .about__section__hero h4 {
+.hero--light h4, .contact__section__hero h4, .waiting__list__section__hero h4, .index__section__hero h4, .features__section__hero h4, .about__section__hero h4 {
   color: #ffffff;
   font-size: 1.425rem;
   font-weight: 300;
@@ -516,48 +524,51 @@ header {
   text-align: center;
   text-transform: uppercase;
 }
-.hero--light p, .contact__section__hero p, .waiting__list__section__hero p, .features__section__hero p, .about__section__hero p,
+.hero--light p, .contact__section__hero p, .waiting__list__section__hero p, .index__section__hero p, .features__section__hero p, .about__section__hero p,
 .hero--light li,
 .contact__section__hero li,
 .waiting__list__section__hero li,
+.index__section__hero li,
 .features__section__hero li,
-.about__section__hero li, .hero--light label, .contact__section__hero label, .waiting__list__section__hero label, .features__section__hero label, .about__section__hero label {
+.about__section__hero li, .hero--light label, .contact__section__hero label, .waiting__list__section__hero label, .index__section__hero label, .features__section__hero label, .about__section__hero label {
   color: #ffffff;
   font-size: 1.2rem;
   font-weight: 300;
   margin-bottom: 1%;
 }
 @media (width > 768px) {
-  .hero--light h1, .contact__section__hero h1, .waiting__list__section__hero h1, .features__section__hero h1, .about__section__hero h1 {
+  .hero--light h1, .contact__section__hero h1, .waiting__list__section__hero h1, .index__section__hero h1, .features__section__hero h1, .about__section__hero h1 {
     font-size: 2.25rem;
   }
-  .hero--light h2, .contact__section__hero h2, .waiting__list__section__hero h2, .features__section__hero h2, .about__section__hero h2 {
+  .hero--light h2, .contact__section__hero h2, .waiting__list__section__hero h2, .index__section__hero h2, .features__section__hero h2, .about__section__hero h2 {
     font-size: 2.16rem;
   }
-  .hero--light h3, .contact__section__hero h3, .waiting__list__section__hero h3, .features__section__hero h3, .about__section__hero h3 {
+  .hero--light h3, .contact__section__hero h3, .waiting__list__section__hero h3, .index__section__hero h3, .features__section__hero h3, .about__section__hero h3 {
     font-size: 1.83rem;
   }
-  .hero--light h4, .contact__section__hero h4, .waiting__list__section__hero h4, .features__section__hero h4, .about__section__hero h4 {
+  .hero--light h4, .contact__section__hero h4, .waiting__list__section__hero h4, .index__section__hero h4, .features__section__hero h4, .about__section__hero h4 {
     font-size: 1.59rem;
   }
-  .hero--light p, .contact__section__hero p, .waiting__list__section__hero p, .features__section__hero p, .about__section__hero p,
+  .hero--light p, .contact__section__hero p, .waiting__list__section__hero p, .index__section__hero p, .features__section__hero p, .about__section__hero p,
   .hero--light li,
   .contact__section__hero li,
   .waiting__list__section__hero li,
+  .index__section__hero li,
   .features__section__hero li,
   .about__section__hero li {
     font-size: 1.5rem;
   }
 }
 @media (width > 1024px) {
-  .hero--light h1, .contact__section__hero h1, .waiting__list__section__hero h1, .features__section__hero h1, .about__section__hero h1 {
+  .hero--light h1, .contact__section__hero h1, .waiting__list__section__hero h1, .index__section__hero h1, .features__section__hero h1, .about__section__hero h1 {
     font-size: 3.3rem;
   }
 }
-.hero--light p, .contact__section__hero p, .waiting__list__section__hero p, .features__section__hero p, .about__section__hero p,
+.hero--light p, .contact__section__hero p, .waiting__list__section__hero p, .index__section__hero p, .features__section__hero p, .about__section__hero p,
 .hero--light li,
 .contact__section__hero li,
 .waiting__list__section__hero li,
+.index__section__hero li,
 .features__section__hero li,
 .about__section__hero li {
   font-size: 1.65rem;
@@ -635,36 +646,15 @@ header {
   font-weight: 400;
 }
 
+.section--center {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 /*--------------------------------------------------  */
-/* GRID CODE MAIN PAGE */
-.page--grid {
-  display: grid;
-  grid-template-areas: "header header header" "nav nav nav" "main main main" "footer footer footer";
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 10px auto 10fr auto;
-}
-
-header {
-  grid-area: header;
-}
-
-nav {
-  grid-area: nav;
-}
-
-aside {
-  grid-area: aside;
-  display: none;
-}
-
-main {
-  grid-area: main;
-}
-
-footer {
-  grid-area: footer;
-}
-
 .grid--responsive {
   /* Responsive gid without media queries */
   display: grid;
@@ -696,6 +686,44 @@ footer {
   }
 }
 
+/*--------------------------------------------------  */
+/* GRID CODE MAIN PAGE */
+.page--grid {
+  display: grid;
+  grid-template-areas: "header" "nav" "main" "footer";
+  grid-template-columns: 100%;
+  grid-template-rows: auto auto auto auto;
+}
+@media (width > 768px) {
+  .page--grid {
+    grid-template-areas: "header header header" "nav nav nav" "main main main" "footer footer footer";
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto 10fr auto;
+  }
+}
+
+header {
+  grid-area: header;
+}
+
+nav {
+  grid-area: nav;
+}
+
+aside {
+  grid-area: aside;
+  display: none;
+}
+
+main {
+  grid-area: main;
+}
+
+footer {
+  grid-area: footer;
+}
+
+/*--------------------------------------------------  */
 .grid__footer, .grid__footer--responsive {
   display: grid;
   gap: 1rem;
@@ -740,6 +768,7 @@ footer {
   }
 }
 
+/*--------------------------------------------------  */
 .grid__contact, .grid__contact--responsive {
   display: grid;
   grid-template-areas: "contact_form" "map" "address";
@@ -835,6 +864,17 @@ fieldset input[type=reset] {
   background-position: left;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.index__section__hero {
+  height: 100vh;
+  background-image: url("../assets/img/wave_patern_AILeak.webp");
+  opacity: 0.9;
+  color: #ffffff;
+  background-attachment: fixed;
+  background-position: left;
+  background-repeat: repeat;
+  background-size: contain;
 }
 
 .waiting__list__section__hero {
