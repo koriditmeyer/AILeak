@@ -1,3 +1,4 @@
+/* BASE */
 * {
   padding: 0;
   margin: 0;
@@ -9,6 +10,7 @@ html {
   font-size: 14px;
 }
 
+/* COMPONENTS */
 button,
 input[type=button],
 input[type=submit],
@@ -35,16 +37,16 @@ input[type=reset] {
 }
 
 .button__section--light {
-  background-color: #ffffff;
+  background-color: #F2F2F2;
   color: #2dc1d7;
 }
 .button__section--light:hover {
   background-color: #faf048;
-  color: #2dc1d7;
+  color: #ffffff;
 }
 
 .button__section--dark {
-  background-color: #ffffff;
+  background-color: #F2F2F2;
   color: #2dc1d7;
   width: auto;
 }
@@ -59,6 +61,7 @@ input[type=reset] {
   flex-direction: column;
   justify-content: flex-start;
   padding: 20px;
+  text-align: justify;
 }
 .card--responsive a {
   align-items: center;
@@ -76,6 +79,7 @@ input[type=reset] {
   flex-direction: column;
   justify-content: flex-start;
   padding: 20px;
+  text-align: justify;
   max-width: 700px;
 }
 .card--responsive--head a {
@@ -88,12 +92,33 @@ input[type=reset] {
   width: 20%;
 }
 
+.card--responsive--footer {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 20px;
+  text-align: justify;
+  max-width: 700px;
+}
+.card--responsive--footer a {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+}
+.card--responsive--footer a img {
+  width: 7%;
+}
+
 .card__presentation--responsive {
   align-items: center;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   padding: 20px;
+  text-align: justify;
+  max-width: 600px;
   background-color: rgba(51, 51, 51, 0.0235294118);
 }
 .card__presentation--responsive a {
@@ -103,15 +128,14 @@ input[type=reset] {
   padding: 5px;
 }
 .card__presentation--responsive a img {
-  width: 20%;
+  width: 40%;
 }
-.card__presentation--responsive :hover {
+.card__presentation--responsive:hover {
   background-color: rgba(51, 51, 51, 0.062745098);
 }
 .card__presentation--responsive img {
   clip-path: polygon(70% 0%, 100% 70%, 70% 100%, 0% 70%);
   opacity: 0.5;
-  width: 60%;
 }
 .card__presentation--responsive img:hover {
   clip-path: circle(50%);
@@ -143,6 +167,55 @@ input[type=reset] {
   -webkit-text-fill-color: transparent;
 }
 
+input[type=text],
+input[type=email],
+input[type=password] {
+  background-color: #F2F2F2;
+  border: none;
+  color: #2dc1d7;
+  font-family: "Nanum Gothic Coding", monospace;
+  font-size: 1.1rem;
+  margin: 0px 20px;
+  margin: 10px;
+  padding: 16px 32px;
+  text-decoration: none;
+}
+
+input:hover {
+  background-color: #faf048;
+  color: #2dc1d7;
+}
+
+.radio_check {
+  padding: 0px 32px;
+}
+
+iframe {
+  width: 100%;
+  height: 100vh;
+  display: block;
+}
+
+.image--blur {
+  /* The image used */
+  background-image: linear-gradient(to top, rgba(45, 192, 215, 0.7725490196), rgba(51, 51, 51, 0.6352941176)), url("../assets/img/contact_Water_leak.webp");
+  /* Add the blur effect */
+  filter: blur(0px);
+  -webkit-filter: blur(2px);
+  /* Full height */
+  height: 100%;
+  /* Opacity */
+  opacity: 0.7;
+  /* Parallax */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  grid-row: 1;
+  grid-column: 1;
+}
+
+/* LAYOUT */
 .flex, .flex__button--responsive, .flex__article--responsive, .flex__article--responsive--right {
   display: flex;
   justify-content: center;
@@ -157,6 +230,21 @@ input[type=reset] {
   flex-basis: 240px;
   flex-grow: 1;
   flex-shrink: 1;
+}
+@media (width > 768px) {
+  .flex__article--responsive, .flex__article--responsive--right {
+    gap: 2rem;
+  }
+}
+@media (width > 1024px) {
+  .flex__article--responsive, .flex__article--responsive--right {
+    gap: 5rem;
+  }
+}
+@media (width > 1600px) {
+  .flex__article--responsive, .flex__article--responsive--right {
+    gap: 20rem;
+  }
 }
 
 @media (width > 768px) {
@@ -186,9 +274,17 @@ header {
 .section--light {
   background-color: #F2F2F2;
 }
+.section--light h1 {
+  color: #2dc1d7;
+  font-size: 1.56rem;
+  font-weight: 700;
+  margin-bottom: 5%;
+  text-align: center;
+  text-transform: uppercase;
+}
 .section--light h2 {
   color: #2dc1d7;
-  font-size: 2rem;
+  font-size: 1.43rem;
   font-weight: 600;
   margin-bottom: 5%;
   text-align: center;
@@ -197,33 +293,64 @@ header {
 .section--light h3 {
   text-transform: uppercase;
   color: #2dc1d7;
-  font-size: 1.8rem;
+  font-size: 1.3rem;
   font-weight: 500;
   margin-bottom: 3%;
   text-align: center;
 }
 .section--light h4 {
   color: #2dc1d7;
-  font-size: 1.5rem;
+  font-size: 1.235rem;
   font-weight: 300;
   margin-bottom: 2%;
   text-align: center;
   text-transform: uppercase;
 }
 .section--light p,
-.section--light li {
+.section--light li, .section--light label {
   color: #000000;
-  font-size: 1.4rem;
+  font-size: 1.04rem;
   font-weight: 300;
   margin-bottom: 1%;
+}
+@media (width > 768px) {
+  .section--light h1 {
+    font-size: 1.95rem;
+  }
+  .section--light h2 {
+    font-size: 1.872rem;
+  }
+  .section--light h3 {
+    font-size: 1.586rem;
+  }
+  .section--light h4 {
+    font-size: 1.378rem;
+  }
+  .section--light p,
+  .section--light li {
+    font-size: 1.3rem;
+  }
+}
+@media (width > 1024px) {
+  .section--light h1 {
+    font-size: 2.86rem;
+  }
 }
 
 .section--light--green {
   background-color: #faf048;
 }
+.section--light--green h1 {
+  color: #2dc1d7;
+  font-size: 1.56rem;
+  font-weight: 700;
+  margin-bottom: 5%;
+  text-align: center;
+  text-transform: uppercase;
+}
 .section--light--green h2 {
   color: #2dc1d7;
-  font-size: 2rem;
+  font-size: 1.43rem;
   font-weight: 600;
   margin-bottom: 5%;
   text-align: center;
@@ -232,33 +359,64 @@ header {
 .section--light--green h3 {
   text-transform: uppercase;
   color: #2dc1d7;
-  font-size: 1.8rem;
+  font-size: 1.3rem;
   font-weight: 500;
   margin-bottom: 3%;
   text-align: center;
 }
 .section--light--green h4 {
   color: #2dc1d7;
-  font-size: 1.5rem;
+  font-size: 1.235rem;
   font-weight: 300;
   margin-bottom: 2%;
   text-align: center;
   text-transform: uppercase;
 }
 .section--light--green p,
-.section--light--green li {
+.section--light--green li, .section--light--green label {
   color: #333;
-  font-size: 1.4rem;
+  font-size: 1.04rem;
   font-weight: 300;
   margin-bottom: 1%;
 }
+@media (width > 768px) {
+  .section--light--green h1 {
+    font-size: 1.95rem;
+  }
+  .section--light--green h2 {
+    font-size: 1.872rem;
+  }
+  .section--light--green h3 {
+    font-size: 1.586rem;
+  }
+  .section--light--green h4 {
+    font-size: 1.378rem;
+  }
+  .section--light--green p,
+  .section--light--green li {
+    font-size: 1.3rem;
+  }
+}
+@media (width > 1024px) {
+  .section--light--green h1 {
+    font-size: 2.86rem;
+  }
+}
 
 .section--dark, .footer--dark {
-  background-color: #333;
+  background-color: #333333;
+}
+.section--dark h1, .footer--dark h1 {
+  color: #2dc1d7;
+  font-size: 1.44rem;
+  font-weight: 700;
+  margin-bottom: 5%;
+  text-align: center;
+  text-transform: uppercase;
 }
 .section--dark h2, .footer--dark h2 {
   color: #2dc1d7;
-  font-size: 2rem;
+  font-size: 1.32rem;
   font-weight: 600;
   margin-bottom: 5%;
   text-align: center;
@@ -267,14 +425,14 @@ header {
 .section--dark h3, .footer--dark h3 {
   text-transform: uppercase;
   color: #2dc1d7;
-  font-size: 1.8rem;
+  font-size: 1.2rem;
   font-weight: 500;
   margin-bottom: 3%;
   text-align: center;
 }
 .section--dark h4, .footer--dark h4 {
   color: #2dc1d7;
-  font-size: 1.5rem;
+  font-size: 1.14rem;
   font-weight: 300;
   margin-bottom: 2%;
   text-align: center;
@@ -282,11 +440,35 @@ header {
 }
 .section--dark p, .footer--dark p,
 .section--dark li,
-.footer--dark li {
+.footer--dark li, .section--dark label, .footer--dark label {
   color: #ffffff;
-  font-size: 1.4rem;
+  font-size: 0.96rem;
   font-weight: 300;
   margin-bottom: 1%;
+}
+@media (width > 768px) {
+  .section--dark h1, .footer--dark h1 {
+    font-size: 1.8rem;
+  }
+  .section--dark h2, .footer--dark h2 {
+    font-size: 1.728rem;
+  }
+  .section--dark h3, .footer--dark h3 {
+    font-size: 1.464rem;
+  }
+  .section--dark h4, .footer--dark h4 {
+    font-size: 1.272rem;
+  }
+  .section--dark p, .footer--dark p,
+  .section--dark li,
+  .footer--dark li {
+    font-size: 1.2rem;
+  }
+}
+@media (width > 1024px) {
+  .section--dark h1, .footer--dark h1 {
+    font-size: 2.64rem;
+  }
 }
 
 .footer--dark h4 {
@@ -297,6 +479,160 @@ header {
 .footer--dark li {
   font-size: 10rem;
   margin-bottom: 10%;
+}
+
+.hero--light, .contact__section__hero, .waiting__list__section__hero, .features__section__hero, .about__section__hero {
+  background-color: #2dc1d7;
+}
+.hero--light h1, .contact__section__hero h1, .waiting__list__section__hero h1, .features__section__hero h1, .about__section__hero h1 {
+  color: #ffffff;
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 5%;
+  text-align: center;
+  text-transform: uppercase;
+}
+.hero--light h2, .contact__section__hero h2, .waiting__list__section__hero h2, .features__section__hero h2, .about__section__hero h2 {
+  color: #ffffff;
+  font-size: 1.65rem;
+  font-weight: 600;
+  margin-bottom: 5%;
+  text-align: center;
+  text-transform: uppercase;
+}
+.hero--light h3, .contact__section__hero h3, .waiting__list__section__hero h3, .features__section__hero h3, .about__section__hero h3 {
+  text-transform: uppercase;
+  color: #ffffff;
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 3%;
+  text-align: center;
+}
+.hero--light h4, .contact__section__hero h4, .waiting__list__section__hero h4, .features__section__hero h4, .about__section__hero h4 {
+  color: #ffffff;
+  font-size: 1.425rem;
+  font-weight: 300;
+  margin-bottom: 2%;
+  text-align: center;
+  text-transform: uppercase;
+}
+.hero--light p, .contact__section__hero p, .waiting__list__section__hero p, .features__section__hero p, .about__section__hero p,
+.hero--light li,
+.contact__section__hero li,
+.waiting__list__section__hero li,
+.features__section__hero li,
+.about__section__hero li, .hero--light label, .contact__section__hero label, .waiting__list__section__hero label, .features__section__hero label, .about__section__hero label {
+  color: #ffffff;
+  font-size: 1.2rem;
+  font-weight: 300;
+  margin-bottom: 1%;
+}
+@media (width > 768px) {
+  .hero--light h1, .contact__section__hero h1, .waiting__list__section__hero h1, .features__section__hero h1, .about__section__hero h1 {
+    font-size: 2.25rem;
+  }
+  .hero--light h2, .contact__section__hero h2, .waiting__list__section__hero h2, .features__section__hero h2, .about__section__hero h2 {
+    font-size: 2.16rem;
+  }
+  .hero--light h3, .contact__section__hero h3, .waiting__list__section__hero h3, .features__section__hero h3, .about__section__hero h3 {
+    font-size: 1.83rem;
+  }
+  .hero--light h4, .contact__section__hero h4, .waiting__list__section__hero h4, .features__section__hero h4, .about__section__hero h4 {
+    font-size: 1.59rem;
+  }
+  .hero--light p, .contact__section__hero p, .waiting__list__section__hero p, .features__section__hero p, .about__section__hero p,
+  .hero--light li,
+  .contact__section__hero li,
+  .waiting__list__section__hero li,
+  .features__section__hero li,
+  .about__section__hero li {
+    font-size: 1.5rem;
+  }
+}
+@media (width > 1024px) {
+  .hero--light h1, .contact__section__hero h1, .waiting__list__section__hero h1, .features__section__hero h1, .about__section__hero h1 {
+    font-size: 3.3rem;
+  }
+}
+.hero--light p, .contact__section__hero p, .waiting__list__section__hero p, .features__section__hero p, .about__section__hero p,
+.hero--light li,
+.contact__section__hero li,
+.waiting__list__section__hero li,
+.features__section__hero li,
+.about__section__hero li {
+  font-size: 1.65rem;
+  font-weight: 400;
+}
+
+.hero--dark {
+  background-color: #333333;
+}
+.hero--dark h1 {
+  color: #2dc1d7;
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 5%;
+  text-align: center;
+  text-transform: uppercase;
+}
+.hero--dark h2 {
+  color: #2dc1d7;
+  font-size: 1.65rem;
+  font-weight: 600;
+  margin-bottom: 5%;
+  text-align: center;
+  text-transform: uppercase;
+}
+.hero--dark h3 {
+  text-transform: uppercase;
+  color: #2dc1d7;
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 3%;
+  text-align: center;
+}
+.hero--dark h4 {
+  color: #2dc1d7;
+  font-size: 1.425rem;
+  font-weight: 300;
+  margin-bottom: 2%;
+  text-align: center;
+  text-transform: uppercase;
+}
+.hero--dark p,
+.hero--dark li, .hero--dark label {
+  color: #ffffff;
+  font-size: 1.2rem;
+  font-weight: 300;
+  margin-bottom: 1%;
+}
+@media (width > 768px) {
+  .hero--dark h1 {
+    font-size: 2.25rem;
+  }
+  .hero--dark h2 {
+    font-size: 2.16rem;
+  }
+  .hero--dark h3 {
+    font-size: 1.83rem;
+  }
+  .hero--dark h4 {
+    font-size: 1.59rem;
+  }
+  .hero--dark p,
+  .hero--dark li {
+    font-size: 1.5rem;
+  }
+}
+@media (width > 1024px) {
+  .hero--dark h1 {
+    font-size: 3.3rem;
+  }
+}
+.hero--dark p,
+.hero--dark li {
+  font-size: 1.65rem;
+  font-weight: 400;
 }
 
 /*--------------------------------------------------  */
@@ -363,7 +699,6 @@ footer {
 .grid__footer, .grid__footer--responsive {
   display: grid;
   gap: 1rem;
-  grid-template-columns: 100%;
   grid-template-areas: "info" "address" "rights";
   grid-template-columns: auto;
   padding: 5px;
@@ -405,9 +740,66 @@ footer {
   }
 }
 
-.section_hero__about {
+.grid__contact, .grid__contact--responsive {
+  display: grid;
+  grid-template-areas: "contact_form" "map" "address";
+  grid-template-columns: auto;
+  margin-top: 50px;
+  padding: 0px;
+}
+.grid__contact .contact_form, .grid__contact--responsive .contact_form {
+  grid-area: contact_form;
+  align-items: center;
+  display: grid;
+}
+.grid__contact .map, .grid__contact--responsive .map {
+  grid-area: map;
+}
+.grid__contact .address, .grid__contact--responsive .address {
+  grid-area: address;
+  display: none;
+  justify-self: center;
+  padding: 20px;
+}
+
+@media (width > 768px) {
+  .grid__contact--responsive .address {
+    display: block;
+  }
+}
+@media (width > 1024px) {
+  .grid__contact--responsive {
+    grid-template-areas: "contact_form map" "contact_form map " "contact_form address";
+    grid-template-columns: 50% 50%; /* <- porque no funciona con 50% */
+    grid-template-rows: auto auto auto;
+  }
+}
+
+fieldset {
+  border-width: 0;
+  display: flex;
+  flex-direction: column;
+  font-family: "Nanum Gothic Coding", monospace;
+  font-size: 1.1rem;
+}
+fieldset input[type=email],
+fieldset input[type=password] {
+  text-align: center;
+}
+fieldset input[type=button],
+fieldset input[type=submit],
+fieldset input[type=reset] {
+  color: #2dc1d7;
+}
+
+.form_contact {
+  padding: 10px;
+  grid-row: 1;
+  grid-column: 1;
+} /* VIEWS */
+.about__section__hero {
   height: 100vh;
-  background-image: url("../assets/img/Image_about_us_team_work_water.png");
+  background-image: url("../assets/img/Image_about_us_team_work_water.webp");
   opacity: 0.9;
   color: #ffffff;
   background-attachment: fixed;
@@ -416,9 +808,9 @@ footer {
   background-size: contain;
 }
 
-.section_hero__features {
+.features__section__hero {
   height: 100vh;
-  background-image: url("../assets/img/pattern_Water_leak.png");
+  background-image: url("../assets/img/pattern_Water_leak.webp");
   opacity: 0.9;
   color: #ffffff;
   background-attachment: fixed;
@@ -438,9 +830,20 @@ footer {
   }
 }
 .feature__section--bg {
-  background-image: url(../assets/img/Road_map.png);
+  background-image: url(../assets/img/Road_map.webp);
   background-attachment: fixed;
   background-position: left;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.waiting__list__section__hero {
+  height: 100vh;
+  background-image: url("../assets/img/Be_the_First_to_Experience_Our_AI-Based_Leak_detection.webp");
+  opacity: 0.9;
+  color: #ffffff;
+  background-attachment: fixed;
+  background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
 }

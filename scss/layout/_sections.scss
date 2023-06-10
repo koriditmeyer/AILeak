@@ -1,9 +1,16 @@
-@mixin section($bg_color, $h_color, $txt_color) {
+@mixin section($bg_color, $h_color, $txt_color, $size) {
   background-color: $bg_color;
-
+  h1{
+    color: $h_color;
+    font-size: $size*1.2;
+    font-weight: 700;
+    margin-bottom: 5%;
+    text-align: center;
+    text-transform: uppercase;
+  }
   h2 {
     color: $h_color;
-    font-size: 2rem;
+    font-size: $size*1.1;
     font-weight: 600;
     margin-bottom: 5%;
     text-align: center;
@@ -12,25 +19,48 @@
   h3 {
     text-transform: uppercase;
     color: $h_color;
-    font-size: 1.8rem;
+    font-size: $size*1.0;
     font-weight: 500;
     margin-bottom: 3%;
     text-align: center;
   }
   h4 {
     color: $h_color;
-    font-size: 1.5rem;
+    font-size: $size*0.95;
     font-weight: 300;
     margin-bottom: 2%;
     text-align: center;
     text-transform: uppercase;
   }
   p,
-  li {
+  li,label {
     color: $txt_color;
-    font-size: 1.4rem;
+    font-size: $size*0.8;
     font-weight: 300;
     margin-bottom: 1%;
+  }
+  @media (width> 768px) {
+    h1{
+      font-size: $size*1.5;
+    }
+    h2 {
+      font-size: $size*1.44;
+    }
+    h3 {
+      font-size: $size*1.22;
+    }
+    h4 {
+      font-size: $size*1.06;
+    }
+    p,
+    li {
+      font-size: $size;
+    }
+  }
+  @media (width> 1024px) {
+    h1{
+      font-size: $size*2.2;
+    }
   }
 }
 
@@ -38,15 +68,20 @@
   @include section(
     map-get($color_light, background),
     map-get($color_light, title),
-    map-get($color_light, texto)
+    map-get($color_light, texto),
+    $size_section
   );
+  
 }
+
+
 
 .section--light--green {
   @include section(
     map-get($color_light_green, background),
     map-get($color_light_green, title),
-    map-get($color_light_green, texto)
+    map-get($color_light_green, texto),
+    $size_section
   );
 }
 
@@ -54,7 +89,8 @@
   @include section(
     map-get($color_dark, background),
     map-get($color_dark, title),
-    map-get($color_dark, texto)
+    map-get($color_dark, texto),
+    $size_footer
   );
 }
 
@@ -72,3 +108,30 @@
 }
   
 
+.hero--light {
+  @include section(
+    map-get($color_light_2, background),
+    map-get($color_light_2, title),
+    map-get($color_light_2, texto),
+    $size_hero
+  );
+  p,
+  li {
+    font-size: $size_hero*1.1;
+    font-weight: 400;
+  }
+}
+
+.hero--dark{
+  @include section(
+    map-get($color_dark, background),
+    map-get($color_dark, title),
+    map-get($color_dark, texto),
+    $size_hero
+  );
+  p,
+  li {
+    font-size: $size_hero*1.1;
+    font-weight: 400;
+  }
+}

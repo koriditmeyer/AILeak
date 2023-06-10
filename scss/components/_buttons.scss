@@ -24,22 +24,22 @@ input[type="reset"] {
 
 .button__section--light {
   @extend .button__section;
-  background-color: #ffffff;
-  color: #2dc1d7;
+  background-color:map-get($color_boton_light, background);
+  color: map-get($color_boton_light, texto);
   
   &:hover {
-    background-color: #faf048;
-    color: #2dc1d7;
+    background-color: map-get($color_boton_light, background_hover);
+    color: map-get($color_boton_light, texto_hover);
   }
 }
 .button__section--dark {
     @extend .button__section;
-    background-color: #ffffff;
-    color: #2dc1d7;
+    background-color: map-get($color_boton_dark, background);
+    color: map-get($color_boton_dark, texto);
     width:auto;
     &:hover {
-      background-color: #2dc1d7;
-      color: #ffffff;
+      background-color: map-get($color_boton_dark, background_hover);
+      color: map-get($color_boton_dark, texto_hover);
     }
   }
 

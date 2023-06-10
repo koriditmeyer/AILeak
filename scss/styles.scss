@@ -1,26 +1,31 @@
-
+/* BASE */
 @import "./base/reset";
 @import "./base/typo";
 @import "./base/colores";
-
+/* COMPONENTS */
 @import "./components/buttons";
 @import "./components/cards";
 @import "./components/hero";
 @import "./components/parallax";
 @import "./components/icons";
-
+@import "./components/input";
+@import "./components/radio";
+@import "./components/iframe";
+@import "./components/image";
+/* LAYOUT */
 @import "./layout/flex";
 @import "./layout/header";
 @import "./layout/footer";
 @import "./layout/nav";
 @import "./layout/sections";
 @import "./layout/grid";
-
+@import "./layout/forms";
+/* VIEWS */
 @import "./views/about";
 @import "./views/features";
 @import "./views/index";
-
-
+@import "./views/waiting_list";
+@import "./views/contact";
 
 
   body {

@@ -2,7 +2,9 @@ $bg_1:rgb(255, 255, 255);
 $bg_2:#F2F2F2;
 $bg_3:#faf048;
 $bg_4:#2dc1d7;
-$bg_5:#333;
+$bg_5:#333333;
+$bg_gd_1:#2dc0d7c5;
+$bg_gd_2:#333333a2;
 $txt_1:#2dc1d7;
 $txt_2:#000000;
 $txt_3:#ffffff;
@@ -13,6 +15,14 @@ background:$bg_2,
 title:$txt_1,
 texto:$txt_2,
 );
+
+$color_light_2:(
+background:$bg_4,
+title:$txt_3,
+texto:$txt_3,
+);
+
+
 
 $color_light_green:(
 background:$bg_3,
@@ -40,5 +50,17 @@ $color_boton_dark:(
     background_hover:$bg_4,
     texto:$txt_1,
     texto_hover:$txt_3 
-)
+);
 
+$color_input_light:(
+    background:$bg_2,
+    background_hover:$bg_3,
+    texto:$txt_1,
+    texto_hover:$txt_1,
+    texto_focus: $bg_3
+);
+
+$color_gradiant_light:(
+    color_top:$bg_gd_2,
+    color_bottom:$bg_gd_1
+);

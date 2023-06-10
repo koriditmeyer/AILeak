@@ -59,7 +59,6 @@ footer {
 .grid__footer {
   display: grid;
   gap: 1rem;
-  grid-template-columns: 100%;
   grid-template-areas:
     "info"
     "address"
@@ -93,10 +92,10 @@ footer {
     grid-template-columns: 50% 50%;
     grid-template-rows: auto auto auto;
     .support {
-      display:block;
+      display: block;
     }
     .address {
-      display:block;
+      display: block;
     }
   }
   @media (width> 1024px) {
@@ -108,3 +107,46 @@ footer {
     grid-template-rows: auto auto auto;
   }
 }
+
+.grid__contact {
+  display: grid;
+  grid-template-areas:
+    "contact_form"
+    "map"
+    "address";
+  grid-template-columns: auto;
+  margin-top: 50px;
+  padding: 0px;
+  .contact_form {
+    grid-area: contact_form;
+    align-items: center;
+    display:grid;     
+  }
+  .map {
+    grid-area: map;
+  }
+  .address {
+    grid-area: address;
+    display: none;
+    justify-self: center;
+    padding: 20px;
+  }
+}
+.grid__contact--responsive {
+  @extend .grid__contact;
+  @media (width> 768px) {
+    .address {
+      display: block;
+    }
+  }
+  @media (width> 1024px) {
+    grid-template-areas:
+      "contact_form map"
+      "contact_form map "
+      "contact_form address";
+    grid-template-columns: 50% 50%; /* <- porque no funciona con 50% */
+    grid-template-rows: auto auto auto;
+  }
+}
+
+

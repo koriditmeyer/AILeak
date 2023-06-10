@@ -1,4 +1,5 @@
-.section_hero__about  {
-  @include hero_section("../assets/img/Image_about_us_team_work_water.png");
+.about__section__hero  {
+  @include hero_section("../assets/img/Image_about_us_team_work_water.webp",100vh);
   @include parallax(no-repeat, contain, right);
+  @extend .hero--light;
 }
