@@ -1,0 +1,8 @@
+.nav-link{
+    color:map-get($color_boton_light , texto );
+}
+
+.nav-link:hover{
+    background-color: map-get($color_boton_dark , background_hover );
+    color:map-get($color_boton_light , texto )!important;
+}

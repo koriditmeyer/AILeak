@@ -1,0 +1,6 @@
+@mixin hero_section($url, $height) {
+    height: $height;
+    background-image: url($url);
+    opacity: 0.9;
+    color:map-get($color_dark , texto );
+  }
