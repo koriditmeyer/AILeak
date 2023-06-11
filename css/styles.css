@@ -118,7 +118,7 @@ input[type=reset] {
   justify-content: flex-start;
   padding: 20px;
   text-align: justify;
-  max-width: 600px;
+  max-width: 500px;
   background-color: rgba(51, 51, 51, 0.0235294118);
 }
 .card__presentation--responsive a {
@@ -206,23 +206,26 @@ iframe {
 
 .image--blur {
   /* The image used */
-  background-image: linear-gradient(to top, rgba(45, 192, 215, 0.7725490196), rgba(51, 51, 51, 0.6352941176)), url("../assets/img/contact_Water_leak.webp");
+  background-image: linear-gradient(to bottom, rgba(45, 192, 215, 0.7725490196), rgba(51, 51, 51, 0.6352941176)), url("../assets/img/contact_Water_leak.webp");
   /* Add the blur effect */
   filter: blur(0px);
-  -webkit-filter: blur(2px);
+  -webkit-filter: blur(0px);
   /* Full height */
   height: 100%;
   /* Opacity */
   opacity: 0.7;
   /* Parallax */
-  background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   grid-row: 1;
   grid-column: 1;
 }
-
+@media (width > 768px) {
+  .image--blur {
+    background-attachment: fixed;
+  }
+}
 /* LAYOUT */
 .flex, .flex__button--responsive, .flex__article--responsive, .flex__article--responsive--right {
   display: flex;
@@ -279,6 +282,7 @@ header {
   color: #2dc1d7 !important;
 }
 
+/* ---------------------------------------------------- */
 .section--light {
   background-color: #F2F2F2;
 }
@@ -479,6 +483,7 @@ header {
   }
 }
 
+/* ---------------------------------------------------- */
 .footer--dark h4 {
   font-size: 20rem;
   margin-bottom: 10%;
@@ -489,6 +494,7 @@ header {
   margin-bottom: 10%;
 }
 
+/* ---------------------------------------------------- */
 .hero--light, .contact__section__hero, .waiting__list__section__hero, .index__section__hero, .features__section__hero, .about__section__hero {
   background-color: #2dc1d7;
 }
@@ -646,6 +652,7 @@ header {
   font-weight: 400;
 }
 
+/* ---------------------------------------------------- */
 .section--center {
   align-items: center;
   display: flex;
@@ -831,23 +838,29 @@ fieldset input[type=reset] {
   background-image: url("../assets/img/Image_about_us_team_work_water.webp");
   opacity: 0.9;
   color: #ffffff;
-  background-attachment: fixed;
   background-position: right;
   background-repeat: no-repeat;
   background-size: contain;
 }
-
+@media (width > 768px) {
+  .about__section__hero {
+    background-attachment: fixed;
+  }
+}
 .features__section__hero {
   height: 100vh;
   background-image: url("../assets/img/pattern_Water_leak.webp");
   opacity: 0.9;
   color: #ffffff;
-  background-attachment: fixed;
   background-position: left;
   background-repeat: repeat;
   background-size: contain;
 }
-
+@media (width > 768px) {
+  .features__section__hero {
+    background-attachment: fixed;
+  }
+}
 @media (width > 768px) {
   .feature__section--cut {
     clip-path: polygon(15% 0%, 100% 0%, 100% 100%, 15% 100%, 10% 70%);
@@ -855,39 +868,48 @@ fieldset input[type=reset] {
 }
 @media (width > 1024px) {
   .feature__section--cut {
-    clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 25% 100%, 20% 70%);
+    clip-path: polygon(25% 0%, 101% 0%, 100% 100%, 25% 100%, 20% 70%);
   }
 }
 .feature__section--bg {
   background-image: url(../assets/img/Road_map.webp);
-  background-attachment: fixed;
   background-position: left;
   background-repeat: no-repeat;
   background-size: cover;
 }
-
+@media (width > 768px) {
+  .feature__section--bg {
+    background-attachment: fixed;
+  }
+}
 .index__section__hero {
   height: 100vh;
   background-image: url("../assets/img/wave_patern_AILeak.webp");
   opacity: 0.9;
   color: #ffffff;
-  background-attachment: fixed;
   background-position: left;
   background-repeat: repeat;
   background-size: contain;
 }
-
+@media (width > 768px) {
+  .index__section__hero {
+    background-attachment: fixed;
+  }
+}
 .waiting__list__section__hero {
   height: 100vh;
   background-image: url("../assets/img/Be_the_First_to_Experience_Our_AI-Based_Leak_detection.webp");
   opacity: 0.9;
   color: #ffffff;
-  background-attachment: fixed;
   background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
 }
-
+@media (width > 768px) {
+  .waiting__list__section__hero {
+    background-attachment: fixed;
+  }
+}
 body {
   background-color: #2dc1d7;
 }

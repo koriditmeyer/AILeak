@@ -63,7 +63,7 @@
     }
   }
 }
-
+/* ---------------------------------------------------- */
 .section--light {
   @include section(
     map-get($color_light, background),
@@ -73,9 +73,6 @@
   );
   
 }
-
-
-
 .section--light--green {
   @include section(
     map-get($color_light_green, background),
@@ -84,7 +81,6 @@
     $size_section
   );
 }
-
 .section--dark {
   @include section(
     map-get($color_dark, background),
@@ -93,7 +89,7 @@
     $size_footer
   );
 }
-
+/* ---------------------------------------------------- */
 .footer--dark {
   @extend .section--dark;
   h4 {
@@ -106,8 +102,7 @@
     margin-bottom: 10%;
   }
 }
-  
-
+/* ---------------------------------------------------- */
 .hero--light {
   @include section(
     map-get($color_light_2, background),
@@ -135,7 +130,7 @@
     font-weight: 400;
   }
 }
-
+/* ---------------------------------------------------- */
 .section--center{
   align-items: center;
   display: flex;

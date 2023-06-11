@@ -1,7 +1,7 @@
 .image--blur {
   /* The image used */
   background-image: linear-gradient(
-      to top,
+      to bottom,
       map-get($color_gradiant_light, color_bottom),
       map-get($color_gradiant_light, color_top)
     ),
@@ -9,7 +9,7 @@
 
   /* Add the blur effect */
   filter: blur(0px);
-  -webkit-filter: blur(2px);
+  -webkit-filter: blur(0px);
 
   /* Full height */
   height: 100%;
