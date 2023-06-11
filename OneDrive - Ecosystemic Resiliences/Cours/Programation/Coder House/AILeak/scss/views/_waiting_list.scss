@@ -1,0 +1,5 @@
+.waiting__list__section__hero  {
+  @include hero_section("../assets/img/Be_the_First_to_Experience_Our_AI-Based_Leak_detection.webp",100vh);
+  @include parallax(no-repeat, cover, top);
+  @extend .hero--light;
+}
