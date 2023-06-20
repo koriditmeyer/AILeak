@@ -1,0 +1,16 @@
+.index__section__hero {
+  @include hero_section("../assets/img/smart_patern.webp", 100vh);
+
+
+  @include parallax(repeat, 50%, left);
+  @extend .hero--light;
+
+  @media (width> 768px) {
+    @include parallax(repeat, 30%, left);
+    }
+  
+  @media (width> 1024px) {
+    @include parallax(repeat, 20%, left);
+    }
+  
+}
