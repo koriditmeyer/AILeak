@@ -175,8 +175,7 @@ input[type=password] {
   color: #2dc1d7;
   font-family: "Nanum Gothic Coding", monospace;
   font-size: 1.1rem;
-  margin: 0px 20px;
-  margin: 10px;
+  margin: 5px 20px;
   padding: 16px 32px;
   text-decoration: none;
 }
@@ -187,7 +186,7 @@ input:hover {
 }
 
 .radio_check {
-  padding: 0px 32px;
+  margin: 5px 20px;
 }
 
 iframe {
@@ -206,7 +205,7 @@ iframe {
 
 .image--blur {
   /* The image used */
-  background-image: linear-gradient(to bottom, rgba(45, 192, 215, 0.7725490196), rgba(51, 51, 51, 0.6352941176)), url("../assets/img/contact_Water_leak.webp");
+  background-image: linear-gradient(to bottom, rgba(45, 192, 215, 0.3568627451), rgba(51, 51, 51, 0.3647058824)), url("../assets/img/contact_Water_leak.webp");
   /* Add the blur effect */
   filter: blur(0px);
   -webkit-filter: blur(0px);
@@ -226,6 +225,22 @@ iframe {
     background-attachment: fixed;
   }
 }
+textarea {
+  background-color: #F2F2F2;
+  border: none;
+  color: #2dc1d7;
+  font-family: "Nanum Gothic Coding", monospace;
+  font-size: 1.1rem;
+  margin: 5px 20px;
+  padding: 16px 32px;
+  text-decoration: none;
+}
+
+textarea:hover {
+  background-color: #faf048;
+  color: #2dc1d7;
+}
+
 /* LAYOUT */
 .flex, .flex__button--responsive, .flex__article--responsive, .flex__article--responsive--right {
   display: flex;
@@ -319,7 +334,8 @@ header {
   text-transform: uppercase;
 }
 .section--light p,
-.section--light li, .section--light label {
+.section--light li,
+.section--light label {
   color: #000000;
   font-size: 1.04rem;
   font-weight: 300;
@@ -339,7 +355,7 @@ header {
     font-size: 1.378rem;
   }
   .section--light p,
-  .section--light li {
+  .section--light li, .section--light label {
     font-size: 1.3rem;
   }
 }
@@ -385,7 +401,8 @@ header {
   text-transform: uppercase;
 }
 .section--light--green p,
-.section--light--green li, .section--light--green label {
+.section--light--green li,
+.section--light--green label {
   color: #333;
   font-size: 1.04rem;
   font-weight: 300;
@@ -405,7 +422,7 @@ header {
     font-size: 1.378rem;
   }
   .section--light--green p,
-  .section--light--green li {
+  .section--light--green li, .section--light--green label {
     font-size: 1.3rem;
   }
 }
@@ -452,7 +469,9 @@ header {
 }
 .section--dark p, .footer--dark p,
 .section--dark li,
-.footer--dark li, .section--dark label, .footer--dark label {
+.footer--dark li,
+.section--dark label,
+.footer--dark label {
   color: #ffffff;
   font-size: 0.96rem;
   font-weight: 300;
@@ -473,7 +492,7 @@ header {
   }
   .section--dark p, .footer--dark p,
   .section--dark li,
-  .footer--dark li {
+  .footer--dark li, .section--dark label, .footer--dark label {
     font-size: 1.2rem;
   }
 }
@@ -536,7 +555,13 @@ header {
 .waiting__list__section__hero li,
 .index__section__hero li,
 .features__section__hero li,
-.about__section__hero li, .hero--light label, .contact__section__hero label, .waiting__list__section__hero label, .index__section__hero label, .features__section__hero label, .about__section__hero label {
+.about__section__hero li,
+.hero--light label,
+.contact__section__hero label,
+.waiting__list__section__hero label,
+.index__section__hero label,
+.features__section__hero label,
+.about__section__hero label {
   color: #ffffff;
   font-size: 1.2rem;
   font-weight: 300;
@@ -561,7 +586,7 @@ header {
   .waiting__list__section__hero li,
   .index__section__hero li,
   .features__section__hero li,
-  .about__section__hero li {
+  .about__section__hero li, .hero--light label, .contact__section__hero label, .waiting__list__section__hero label, .index__section__hero label, .features__section__hero label, .about__section__hero label {
     font-size: 1.5rem;
   }
 }
@@ -617,7 +642,8 @@ header {
   text-transform: uppercase;
 }
 .hero--dark p,
-.hero--dark li, .hero--dark label {
+.hero--dark li,
+.hero--dark label {
   color: #ffffff;
   font-size: 1.2rem;
   font-weight: 300;
@@ -637,7 +663,7 @@ header {
     font-size: 1.59rem;
   }
   .hero--dark p,
-  .hero--dark li {
+  .hero--dark li, .hero--dark label {
     font-size: 1.5rem;
   }
 }
@@ -662,7 +688,7 @@ header {
 }
 
 /*--------------------------------------------------  */
-.grid--responsive {
+.grid--responsive, .grid--responsive--radio {
   /* Responsive gid without media queries */
   display: grid;
   gap: 1rem;
@@ -811,6 +837,11 @@ footer {
   }
 }
 
+/*--------------------------------------------------  */
+.grid--responsive--radio {
+  padding: 5px 0px;
+}
+
 fieldset {
   border-width: 0;
   display: flex;
@@ -832,7 +863,9 @@ fieldset input[type=reset] {
   padding: 10px;
   grid-row: 1;
   grid-column: 1;
-} /* VIEWS */
+}
+
+/* VIEWS */
 .about__section__hero {
   height: 100vh;
   background-image: url("../assets/img/Image_about_us_team_work_water.webp");
@@ -889,9 +922,33 @@ fieldset input[type=reset] {
   color: #ffffff;
   background-position: left;
   background-repeat: repeat;
-  background-size: 30%;
+  background-size: 50%;
 }
 @media (width > 768px) {
+  .index__section__hero {
+    background-attachment: fixed;
+  }
+}
+@media (width > 768px) {
+  .index__section__hero {
+    background-position: left;
+    background-repeat: repeat;
+    background-size: 30%;
+  }
+}
+@media (width > 768px) and (width > 768px) {
+  .index__section__hero {
+    background-attachment: fixed;
+  }
+}
+@media (width > 1024px) {
+  .index__section__hero {
+    background-position: left;
+    background-repeat: repeat;
+    background-size: 20%;
+  }
+}
+@media (width > 1024px) and (width > 768px) {
   .index__section__hero {
     background-attachment: fixed;
   }

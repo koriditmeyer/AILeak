@@ -1,6 +1,5 @@
 /*--------------------------------------------------  */
 
-
 @mixin grid($columns, $size) {
   display: grid;
   gap: 1rem;
@@ -41,13 +40,12 @@
   grid-template-rows: auto auto auto auto;
   @media (width> 768px) {
     grid-template-areas:
-    "header header header"
-    "nav nav nav"
-    "main main main"
-    "footer footer footer";
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: auto auto 10fr auto;
-    
+      "header header header"
+      "nav nav nav"
+      "main main main"
+      "footer footer footer";
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto 10fr auto;
   }
 }
 
@@ -67,7 +65,6 @@ main {
 footer {
   grid-area: footer;
 }
-
 
 /*--------------------------------------------------  */
 .grid__footer {
@@ -134,7 +131,7 @@ footer {
   .contact_form {
     grid-area: contact_form;
     align-items: center;
-    display:grid;     
+    display: grid;
   }
   .map {
     grid-area: map;
@@ -162,5 +159,8 @@ footer {
     grid-template-rows: auto auto auto;
   }
 }
-
-
+/*--------------------------------------------------  */
+.grid--responsive--radio {
+  @extend .grid--responsive;
+  padding: 5px 0px;
+}
