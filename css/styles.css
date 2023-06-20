@@ -917,7 +917,7 @@ fieldset input[type=reset] {
 }
 .index__section__hero {
   height: 100vh;
-  background-image: url("../assets/img/smart_patern.webp");
+  background-image: url(#06a3be);
   opacity: 0.9;
   color: #ffffff;
   background-position: left;
