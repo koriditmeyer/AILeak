@@ -9,7 +9,7 @@
 
 .grid--responsive {
   /* Responsive gid without media queries */
-  @include grid(auto-fit, minmax(320px, 1fr));
+  @include grid(auto-fit, minmax(300px, 1fr));
 
   /* Responsive gid with mediaqueries -> More exact */
   &--mq {
@@ -161,6 +161,10 @@ footer {
 }
 /*--------------------------------------------------  */
 .grid--responsive--radio {
-  @extend .grid--responsive;
-  padding: 5px 0px;
+  @include grid(auto-fit, minmax(100px, 1fr));
+  padding: 0px 0px;
+  justify-items: center;
 }
+
+
+

@@ -18,11 +18,12 @@
 
 .card--responsive {
   @include sec__card(20%);
+  
 }
 
 .card--responsive--head {
   @include sec__card(20%);
-  max-width: 700px;
+  max-width: 1023px;
 }
 
 .card--responsive--footer {
@@ -32,7 +33,7 @@
 
 .card__presentation--responsive {
   @include sec__card(40%);
-  max-width: 500px;
+  max-width: 1023px;
   background-color: #33333306;
   &:hover {
     background-color: #33333310;
