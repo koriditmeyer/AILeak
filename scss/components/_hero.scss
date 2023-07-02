@@ -1,6 +1,8 @@
 @mixin hero_section($url, $height) {
+  overflow: auto;
+  position: relative;
     height: $height;
     background-image: url($url);
-    opacity: 0.9;
+    opacity: 1;
     color:map-get($color_dark , texto );
   }

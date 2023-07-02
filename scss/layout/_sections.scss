@@ -38,8 +38,16 @@
     color: $txt_color;
     font-size: $size * 0.8;
     font-weight: 300;
+    margin-bottom: 3%;
+  }
+  b,
+  strong {
+    color: $txt_color;
+    font-size: $size * 0.8;
+    font-weight: 600;
     margin-bottom: 1%;
   }
+
   @media (width> 768px) {
     h1 {
       font-size: $size * 1.5;
@@ -54,7 +62,12 @@
       font-size: $size * 1.06;
     }
     p,
-    li,label {
+    li,
+    label {
+      font-size: $size;
+    }
+    b,
+    strong {
       font-size: $size;
     }
   }
@@ -112,7 +125,7 @@
   );
   p,
   li {
-    font-size: $size_hero * 1.0;
+    font-size: $size_hero * 1;
     font-weight: 400;
   }
 }
@@ -127,6 +140,20 @@
   p,
   li {
     font-size: $size_hero * 1.1;
+    font-weight: 400;
+  }
+}
+
+.hero--light--green {
+  @include section(
+    map-get($color_light_2, background),
+    map-get($color_light_2, texto_mq),
+    map-get($color_light_2, texto_mq),
+    $size_hero
+  );
+  p,
+  li {
+    font-size: $size_hero * 1;
     font-weight: 400;
   }
 }

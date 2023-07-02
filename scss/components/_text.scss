@@ -1,0 +1,37 @@
+.highlight {
+    display: inline;
+    padding: .25em 0;
+    background: map-get($color_light_2, background);
+    color: map-get($color_light_2, texto);
+    box-shadow: .5em 0 0 map-get($color_light_2, background), -.5em 0 0 map-get($color_light_2, background);
+  }
+
+  mark {
+    -webkit-animation: 1.5s highlight 1.5s 1 normal forwards;
+            animation: 1.5s highlight 1.5s 1 normal forwards;
+    background-color: none;
+    background: linear-gradient(90deg, map-get($color_light_2, background) 50%,map-get($color_light, background) 50%);
+    background-size: 200% 100%;
+    background-position: 100% 0;
+  }
+  
+  @-webkit-keyframes highlight {
+    to {
+      background-position: 0 0;
+    }
+  }
+  
+  @keyframes highlight {
+    to {
+      background-position: 0 0;
+    }
+  }
+  
+  .badges {
+    background-color: map-get($color_light_green, background);
+    color: map-get($color_light_green, texto);
+    padding: .25em 10px;
+    text-align: center;
+    border-radius: 8px;
+  }
+  

@@ -10,6 +10,9 @@ $txt_2:#000000;
 $txt_3:#ffffff;
 $txt_4:#333;
 
+$shadow_1:#535151;
+
+
 $color_light:(
 background:$bg_2,
 title:$txt_1,
@@ -20,6 +23,7 @@ $color_light_2:(
 background:$bg_4,
 title:$txt_3,
 texto:$txt_3,
+texto_mq: $bg_3
 );
 
 

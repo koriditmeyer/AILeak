@@ -241,6 +241,41 @@ textarea:hover {
   color: #2dc1d7;
 }
 
+.highlight {
+  display: inline;
+  padding: 0.25em 0;
+  background: #2dc1d7;
+  color: #ffffff;
+  box-shadow: 0.5em 0 0 #2dc1d7, -0.5em 0 0 #2dc1d7;
+}
+
+mark {
+  -webkit-animation: 1.5s highlight 1.5s 1 normal forwards;
+  animation: 1.5s highlight 1.5s 1 normal forwards;
+  background-color: none;
+  background: linear-gradient(90deg, #2dc1d7 50%, #F2F2F2 50%);
+  background-size: 200% 100%;
+  background-position: 100% 0;
+}
+
+@-webkit-keyframes highlight {
+  to {
+    background-position: 0 0;
+  }
+}
+@keyframes highlight {
+  to {
+    background-position: 0 0;
+  }
+}
+.badges {
+  background-color: #faf048;
+  color: #333;
+  padding: 0.25em 10px;
+  text-align: center;
+  border-radius: 8px;
+}
+
 /* LAYOUT */
 .flex, .flex__button--responsive, .flex__article--responsive, .flex__article--responsive--right {
   display: flex;
@@ -355,6 +390,13 @@ header {
   color: #000000;
   font-size: 1.36rem;
   font-weight: 300;
+  margin-bottom: 3%;
+}
+.section--light b,
+.section--light strong {
+  color: #000000;
+  font-size: 1.36rem;
+  font-weight: 600;
   margin-bottom: 1%;
 }
 @media (width > 768px) {
@@ -371,7 +413,12 @@ header {
     font-size: 1.802rem;
   }
   .section--light p,
-  .section--light li, .section--light label {
+  .section--light li,
+  .section--light label {
+    font-size: 1.7rem;
+  }
+  .section--light b,
+  .section--light strong {
     font-size: 1.7rem;
   }
 }
@@ -422,6 +469,13 @@ header {
   color: #333;
   font-size: 1.36rem;
   font-weight: 300;
+  margin-bottom: 3%;
+}
+.section--light--green b,
+.section--light--green strong {
+  color: #333;
+  font-size: 1.36rem;
+  font-weight: 600;
   margin-bottom: 1%;
 }
 @media (width > 768px) {
@@ -438,7 +492,12 @@ header {
     font-size: 1.802rem;
   }
   .section--light--green p,
-  .section--light--green li, .section--light--green label {
+  .section--light--green li,
+  .section--light--green label {
+    font-size: 1.7rem;
+  }
+  .section--light--green b,
+  .section--light--green strong {
     font-size: 1.7rem;
   }
 }
@@ -491,6 +550,14 @@ header {
   color: #ffffff;
   font-size: 1.04rem;
   font-weight: 300;
+  margin-bottom: 3%;
+}
+.section--dark b, .footer--dark b,
+.section--dark strong,
+.footer--dark strong {
+  color: #ffffff;
+  font-size: 1.04rem;
+  font-weight: 600;
   margin-bottom: 1%;
 }
 @media (width > 768px) {
@@ -508,7 +575,14 @@ header {
   }
   .section--dark p, .footer--dark p,
   .section--dark li,
-  .footer--dark li, .section--dark label, .footer--dark label {
+  .footer--dark li,
+  .section--dark label,
+  .footer--dark label {
+    font-size: 1.3rem;
+  }
+  .section--dark b, .footer--dark b,
+  .section--dark strong,
+  .footer--dark strong {
     font-size: 1.3rem;
   }
 }
@@ -530,95 +604,115 @@ header {
 }
 
 /* ---------------------------------------------------- */
-.hero--light, .contact__section__hero, .waiting__list__section__hero, .index__section__hero, .features__section__hero, .about__section__hero {
+.hero--light, .contact__section__hero, .waiting__list__section__hero, .index__section__hero, .features__section__hero {
   background-color: #2dc1d7;
 }
-.hero--light h1, .contact__section__hero h1, .waiting__list__section__hero h1, .index__section__hero h1, .features__section__hero h1, .about__section__hero h1 {
+.hero--light h1, .contact__section__hero h1, .waiting__list__section__hero h1, .index__section__hero h1, .features__section__hero h1 {
   color: #ffffff;
-  font-size: 2.4rem;
+  font-size: 1.8rem;
   font-weight: 700;
   margin-bottom: 5%;
   text-align: center;
   text-transform: uppercase;
 }
-.hero--light h2, .contact__section__hero h2, .waiting__list__section__hero h2, .index__section__hero h2, .features__section__hero h2, .about__section__hero h2 {
+.hero--light h2, .contact__section__hero h2, .waiting__list__section__hero h2, .index__section__hero h2, .features__section__hero h2 {
   color: #ffffff;
-  font-size: 2.2rem;
+  font-size: 1.65rem;
   font-weight: 600;
   margin-bottom: 5%;
   text-align: center;
   text-transform: uppercase;
 }
-.hero--light h3, .contact__section__hero h3, .waiting__list__section__hero h3, .index__section__hero h3, .features__section__hero h3, .about__section__hero h3 {
+.hero--light h3, .contact__section__hero h3, .waiting__list__section__hero h3, .index__section__hero h3, .features__section__hero h3 {
   text-transform: uppercase;
   color: #ffffff;
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: 500;
   margin-bottom: 3%;
   text-align: center;
 }
-.hero--light h4, .contact__section__hero h4, .waiting__list__section__hero h4, .index__section__hero h4, .features__section__hero h4, .about__section__hero h4 {
+.hero--light h4, .contact__section__hero h4, .waiting__list__section__hero h4, .index__section__hero h4, .features__section__hero h4 {
   color: #ffffff;
-  font-size: 1.9rem;
+  font-size: 1.425rem;
   font-weight: 300;
   margin-bottom: 2%;
   text-align: center;
   text-transform: uppercase;
 }
-.hero--light p, .contact__section__hero p, .waiting__list__section__hero p, .index__section__hero p, .features__section__hero p, .about__section__hero p,
+.hero--light p, .contact__section__hero p, .waiting__list__section__hero p, .index__section__hero p, .features__section__hero p,
 .hero--light li,
 .contact__section__hero li,
 .waiting__list__section__hero li,
 .index__section__hero li,
 .features__section__hero li,
-.about__section__hero li,
 .hero--light label,
 .contact__section__hero label,
 .waiting__list__section__hero label,
 .index__section__hero label,
-.features__section__hero label,
-.about__section__hero label {
+.features__section__hero label {
   color: #ffffff;
-  font-size: 1.6rem;
+  font-size: 1.2rem;
   font-weight: 300;
+  margin-bottom: 3%;
+}
+.hero--light b, .contact__section__hero b, .waiting__list__section__hero b, .index__section__hero b, .features__section__hero b,
+.hero--light strong,
+.contact__section__hero strong,
+.waiting__list__section__hero strong,
+.index__section__hero strong,
+.features__section__hero strong {
+  color: #ffffff;
+  font-size: 1.2rem;
+  font-weight: 600;
   margin-bottom: 1%;
 }
 @media (width > 768px) {
-  .hero--light h1, .contact__section__hero h1, .waiting__list__section__hero h1, .index__section__hero h1, .features__section__hero h1, .about__section__hero h1 {
-    font-size: 3rem;
+  .hero--light h1, .contact__section__hero h1, .waiting__list__section__hero h1, .index__section__hero h1, .features__section__hero h1 {
+    font-size: 2.25rem;
   }
-  .hero--light h2, .contact__section__hero h2, .waiting__list__section__hero h2, .index__section__hero h2, .features__section__hero h2, .about__section__hero h2 {
-    font-size: 2.88rem;
+  .hero--light h2, .contact__section__hero h2, .waiting__list__section__hero h2, .index__section__hero h2, .features__section__hero h2 {
+    font-size: 2.16rem;
   }
-  .hero--light h3, .contact__section__hero h3, .waiting__list__section__hero h3, .index__section__hero h3, .features__section__hero h3, .about__section__hero h3 {
-    font-size: 2.44rem;
+  .hero--light h3, .contact__section__hero h3, .waiting__list__section__hero h3, .index__section__hero h3, .features__section__hero h3 {
+    font-size: 1.83rem;
   }
-  .hero--light h4, .contact__section__hero h4, .waiting__list__section__hero h4, .index__section__hero h4, .features__section__hero h4, .about__section__hero h4 {
-    font-size: 2.12rem;
+  .hero--light h4, .contact__section__hero h4, .waiting__list__section__hero h4, .index__section__hero h4, .features__section__hero h4 {
+    font-size: 1.59rem;
   }
-  .hero--light p, .contact__section__hero p, .waiting__list__section__hero p, .index__section__hero p, .features__section__hero p, .about__section__hero p,
+  .hero--light p, .contact__section__hero p, .waiting__list__section__hero p, .index__section__hero p, .features__section__hero p,
   .hero--light li,
   .contact__section__hero li,
   .waiting__list__section__hero li,
   .index__section__hero li,
   .features__section__hero li,
-  .about__section__hero li, .hero--light label, .contact__section__hero label, .waiting__list__section__hero label, .index__section__hero label, .features__section__hero label, .about__section__hero label {
-    font-size: 2rem;
+  .hero--light label,
+  .contact__section__hero label,
+  .waiting__list__section__hero label,
+  .index__section__hero label,
+  .features__section__hero label {
+    font-size: 1.5rem;
+  }
+  .hero--light b, .contact__section__hero b, .waiting__list__section__hero b, .index__section__hero b, .features__section__hero b,
+  .hero--light strong,
+  .contact__section__hero strong,
+  .waiting__list__section__hero strong,
+  .index__section__hero strong,
+  .features__section__hero strong {
+    font-size: 1.5rem;
   }
 }
 @media (width > 1024px) {
-  .hero--light h1, .contact__section__hero h1, .waiting__list__section__hero h1, .index__section__hero h1, .features__section__hero h1, .about__section__hero h1 {
-    font-size: 4.4rem;
+  .hero--light h1, .contact__section__hero h1, .waiting__list__section__hero h1, .index__section__hero h1, .features__section__hero h1 {
+    font-size: 3.3rem;
   }
 }
-.hero--light p, .contact__section__hero p, .waiting__list__section__hero p, .index__section__hero p, .features__section__hero p, .about__section__hero p,
+.hero--light p, .contact__section__hero p, .waiting__list__section__hero p, .index__section__hero p, .features__section__hero p,
 .hero--light li,
 .contact__section__hero li,
 .waiting__list__section__hero li,
 .index__section__hero li,
-.features__section__hero li,
-.about__section__hero li {
-  font-size: 2rem;
+.features__section__hero li {
+  font-size: 1.5rem;
   font-weight: 400;
 }
 
@@ -627,7 +721,7 @@ header {
 }
 .hero--dark h1 {
   color: #2dc1d7;
-  font-size: 2.4rem;
+  font-size: 1.8rem;
   font-weight: 700;
   margin-bottom: 5%;
   text-align: center;
@@ -635,7 +729,7 @@ header {
 }
 .hero--dark h2 {
   color: #2dc1d7;
-  font-size: 2.2rem;
+  font-size: 1.65rem;
   font-weight: 600;
   margin-bottom: 5%;
   text-align: center;
@@ -644,14 +738,14 @@ header {
 .hero--dark h3 {
   text-transform: uppercase;
   color: #2dc1d7;
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: 500;
   margin-bottom: 3%;
   text-align: center;
 }
 .hero--dark h4 {
   color: #2dc1d7;
-  font-size: 1.9rem;
+  font-size: 1.425rem;
   font-weight: 300;
   margin-bottom: 2%;
   text-align: center;
@@ -661,36 +755,139 @@ header {
 .hero--dark li,
 .hero--dark label {
   color: #ffffff;
-  font-size: 1.6rem;
+  font-size: 1.2rem;
   font-weight: 300;
+  margin-bottom: 3%;
+}
+.hero--dark b,
+.hero--dark strong {
+  color: #ffffff;
+  font-size: 1.2rem;
+  font-weight: 600;
   margin-bottom: 1%;
 }
 @media (width > 768px) {
   .hero--dark h1 {
-    font-size: 3rem;
+    font-size: 2.25rem;
   }
   .hero--dark h2 {
-    font-size: 2.88rem;
+    font-size: 2.16rem;
   }
   .hero--dark h3 {
-    font-size: 2.44rem;
+    font-size: 1.83rem;
   }
   .hero--dark h4 {
-    font-size: 2.12rem;
+    font-size: 1.59rem;
   }
   .hero--dark p,
-  .hero--dark li, .hero--dark label {
-    font-size: 2rem;
+  .hero--dark li,
+  .hero--dark label {
+    font-size: 1.5rem;
+  }
+  .hero--dark b,
+  .hero--dark strong {
+    font-size: 1.5rem;
   }
 }
 @media (width > 1024px) {
   .hero--dark h1 {
-    font-size: 4.4rem;
+    font-size: 3.3rem;
   }
 }
 .hero--dark p,
 .hero--dark li {
-  font-size: 2.2rem;
+  font-size: 1.65rem;
+  font-weight: 400;
+}
+
+.hero--light--green, .about__section__hero {
+  background-color: #2dc1d7;
+}
+.hero--light--green h1, .about__section__hero h1 {
+  color: #faf048;
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 5%;
+  text-align: center;
+  text-transform: uppercase;
+}
+.hero--light--green h2, .about__section__hero h2 {
+  color: #faf048;
+  font-size: 1.65rem;
+  font-weight: 600;
+  margin-bottom: 5%;
+  text-align: center;
+  text-transform: uppercase;
+}
+.hero--light--green h3, .about__section__hero h3 {
+  text-transform: uppercase;
+  color: #faf048;
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 3%;
+  text-align: center;
+}
+.hero--light--green h4, .about__section__hero h4 {
+  color: #faf048;
+  font-size: 1.425rem;
+  font-weight: 300;
+  margin-bottom: 2%;
+  text-align: center;
+  text-transform: uppercase;
+}
+.hero--light--green p, .about__section__hero p,
+.hero--light--green li,
+.about__section__hero li,
+.hero--light--green label,
+.about__section__hero label {
+  color: #faf048;
+  font-size: 1.2rem;
+  font-weight: 300;
+  margin-bottom: 3%;
+}
+.hero--light--green b, .about__section__hero b,
+.hero--light--green strong,
+.about__section__hero strong {
+  color: #faf048;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 1%;
+}
+@media (width > 768px) {
+  .hero--light--green h1, .about__section__hero h1 {
+    font-size: 2.25rem;
+  }
+  .hero--light--green h2, .about__section__hero h2 {
+    font-size: 2.16rem;
+  }
+  .hero--light--green h3, .about__section__hero h3 {
+    font-size: 1.83rem;
+  }
+  .hero--light--green h4, .about__section__hero h4 {
+    font-size: 1.59rem;
+  }
+  .hero--light--green p, .about__section__hero p,
+  .hero--light--green li,
+  .about__section__hero li,
+  .hero--light--green label,
+  .about__section__hero label {
+    font-size: 1.5rem;
+  }
+  .hero--light--green b, .about__section__hero b,
+  .hero--light--green strong,
+  .about__section__hero strong {
+    font-size: 1.5rem;
+  }
+}
+@media (width > 1024px) {
+  .hero--light--green h1, .about__section__hero h1 {
+    font-size: 3.3rem;
+  }
+}
+.hero--light--green p, .about__section__hero p,
+.hero--light--green li,
+.about__section__hero li {
+  font-size: 1.5rem;
   font-weight: 400;
 }
 
@@ -870,7 +1067,9 @@ fieldset {
   font-family: "Nanum Gothic Coding", monospace;
   font-size: 1.1rem;
 }
-fieldset input[type=email],
+fieldset input[type=email] {
+  text-align: left;
+}
 fieldset input[type=password] {
   text-align: center;
 }
@@ -888,23 +1087,53 @@ fieldset input[type=reset] {
 
 /* VIEWS */
 .about__section__hero {
+  overflow: auto;
+  position: relative;
   height: 100vh;
   background-image: url("../assets/img/Image_about_us_team_work_water.webp");
-  opacity: 0.9;
+  opacity: 1;
   color: #ffffff;
-  background-position: right;
+  background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
+  text-shadow: 3px 3px 8px #535151;
 }
 @media (width > 768px) {
   .about__section__hero {
     background-attachment: fixed;
   }
 }
+@media (width > 768px) {
+  .about__section__hero {
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: contain;
+    text-shadow: none;
+  }
+}
+@media (width > 768px) and (width > 768px) {
+  .about__section__hero {
+    background-attachment: fixed;
+  }
+}
+@media (width > 1024px) {
+  .about__section__hero {
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}
+@media (width > 1024px) and (width > 768px) {
+  .about__section__hero {
+    background-attachment: fixed;
+  }
+}
 .features__section__hero {
+  overflow: auto;
+  position: relative;
   height: 100vh;
   background-image: url("../assets/img/pattern_Water_leak.webp");
-  opacity: 0.9;
+  opacity: 1;
   color: #ffffff;
   background-position: left;
   background-repeat: repeat;
@@ -937,9 +1166,11 @@ fieldset input[type=reset] {
   }
 }
 .index__section__hero {
+  overflow: auto;
+  position: relative;
   height: 100vh;
   background-image: url(#06a3be);
-  opacity: 0.9;
+  opacity: 1;
   color: #ffffff;
   background-position: left;
   background-repeat: repeat;
@@ -975,9 +1206,11 @@ fieldset input[type=reset] {
   }
 }
 .waiting__list__section__hero {
+  overflow: auto;
+  position: relative;
   height: 100vh;
   background-image: url("../assets/img/Be_the_First_to_Experience_Our_AI-Based_Leak_detection.webp");
-  opacity: 0.9;
+  opacity: 1;
   color: #ffffff;
   background-position: top;
   background-repeat: no-repeat;
