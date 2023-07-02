@@ -200,7 +200,7 @@ iframe {
   right: 0;
   top: 0;
   width: 100%;
-  z-index: -1;
+  z-index: 0;
 }
 
 .image--blur {
@@ -1169,7 +1169,7 @@ fieldset input[type=reset] {
   overflow: auto;
   position: relative;
   height: 100vh;
-  background-image: url(#06a3be);
+  background-image: url(none);
   opacity: 1;
   color: #ffffff;
   background-position: left;

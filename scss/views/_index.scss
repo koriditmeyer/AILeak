@@ -1,5 +1,5 @@
 .index__section__hero {
-  @include hero_section(#06a3be, 100vh);
+  @include hero_section(none, 100vh);
   @include parallax(repeat, 50%, left);
   @extend .hero--light;
 
